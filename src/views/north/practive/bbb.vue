@@ -1,7 +1,8 @@
 <template>
     <div>
-        text测试总分值 分支写的代码
-        我是aaa组长,
+        bbb也开始写了
+        bbb写了第二遍了...
+        bbb第三次提交...
     </div>
 </template>
 <script>
