@@ -1,0 +1,43 @@
+@import './common.less';
+
+body {
+  font-family: Microsoft YaHei, PingFangSC, Arial, Helvetica !important;
+  padding: 0;
+  margin: 0;
+}
+
+// <-- 覆盖 element-ui 开始
+// 手机区号选择显示字体居中
+.phone-select-fix /deep/ .el-select {
+  .el-input {
+    .el-input__inner {
+      text-align: center;
+    }
+  }
+}
+
+// 表格safari兼容, 在safari浏览器中element-ui的表格可能导致溢出
+/deep/ .el-table__body {
+  width: 100%;
+  table-layout: fixed !important;
+}
+
+// 修复因为全局img max-width 属性导致头像无法铺开的问题
+/deep/ .el-avatar {
+  img {
+    width: 100% !important;
+    max-width: none;
+  }
+}
+
+// checkbox选中颜色
+.el-checkbox.is-checked {
+  .el-checkbox__inner {
+    border-color: @color-primary !important;
+    background-color: @color-primary !important;
+  }
+  .el-checkbox__label {
+    color: @color-primary !important;
+  }
+}
+// 覆盖 element-ui 结束 -->

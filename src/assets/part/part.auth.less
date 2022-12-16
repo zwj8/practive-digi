@@ -1,0 +1,36 @@
+// 登陆注册页面
+.user-form-container {
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
+  header {
+    h1 {
+      size: 46px;
+    }
+    p {
+      font-size: 22px;
+      margin-top: 24px;
+      margin-bottom: 45px;
+    }
+  }
+  form {
+    width: 530px;
+    margin: 0 auto;
+  }
+}
+
+// 注册和登录页公共样式
+.reglog-public {
+  background-image: url('@{oss_prefix}/default/adseasy_login_background.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  height: @layout-front-height;
+  min-height: 700px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
