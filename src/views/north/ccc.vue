@@ -1,6 +1,7 @@
 <template>
     <div>
         ccc小伙伴加入进来了
+        ccc 小伙伴又写了第二个功能页面
     </div>
 </template>
 <script>
