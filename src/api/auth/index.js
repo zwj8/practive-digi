@@ -32,4 +32,7 @@ AUTH.tokenCheck = params => { return axios.get('/auth/authorize', { params: para
 // 用户登录/注册
 AUTH.LoginAndSign = params => { return axios.post('/auth/v2/sign', params) }
 
+// 用户点击链接舔砖的激活页面
+AUTH.activatAccount = ({appKey, region, lan, email,code}) => { return axios.get(`/auth/user-active/${appKey}/${region}/${lan}/${email}/${code}`) }
+
 export default AUTH

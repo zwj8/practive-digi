@@ -27,29 +27,40 @@ const frameOut = [
     //   })
     // }
   },
-  // 北美版登录路由
+
+  // 北美认证登录
   {
-    path: '/northlogin',
-    name: 'northlogin',
-    component: () => import('@/views/north/login.vue')
+path:'/us',
+name: 'us',
+component:routerView,
+redirect:{ name: 'usLogin'},
+children:[
+      //北美登录页
+      {
+        path:'login',
+        name:'usLogin',
+        component: ()=> import('@/views/us/Login.vue')
+      },
+      //北美忘记密码
+      {
+        path: 'ForgotPasswd',
+        name: 'ForgotPasswd',
+        component: () => import('@/views/us/password/ForgotPasswd.vue')
+      },
+      //北美注册详情页面
+      {
+        path: 'register',
+        name: 'usregister',
+        component: () => import('@/views/us/password/RegisterDetail.vue')
+      },
+    ]
   },
-  //北美版修改密码
+  //用户激活页面  /:appkey/:region/:lan/:email/:code
   {
-    path: '/password',
-    name: 'password',
-    component: () => import('@/views/north/passwd/ForgotPasswd.vue')
+    path: '/user-active/:appkey/:region/:lan/:email/:code',
+    name: 'UserActive',
+    component: () => import('@/views/us/password/UserActive.vue')
   },
-    //北美版注册详情页
-    {
-      path: '/detailpage',
-      name: 'detailpage',
-      component: () => import('@/views/north/passwd/detailpage.vue')
-    },
-
-
-
-
-
 
   {
     path: '/signup',
