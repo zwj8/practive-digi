@@ -9,16 +9,12 @@
         <slot name="title" />
       </header>
       <div ref="modal" class="content modal-content">
-        <div
-          v-if="loading"
-          class="modal-svg-wrapper"
-          :style="`
-            width: ${loadingWidth}px;
-            height: ${loadingHeight}px;
-          `"
-        >
+        <div v-if="loading" class="modal-svg-wrapper" :style="`
+          width: ${loadingWidth}px;
+          height: ${loadingHeight}px;
+        `">
           <svg viewBox="25 25 50 50" class="com-modal-circular">
-            <circle cx="50" cy="50" r="20" fill="none" class="path"/>
+            <circle cx="50" cy="50" r="20" fill="none" class="path" />
           </svg>
         </div>
         <slot />
@@ -43,7 +39,7 @@ export default {
   },
   components: {},
   filters: {},
-  data () {
+  data() {
     return {
       loadingHeight: '',
       loadingWidth: ''
@@ -51,7 +47,7 @@ export default {
   },
   computed: {},
   watch: {
-    value (newValue) {
+    value(newValue) {
       if (newValue) {
         this.setClass(true)
       } else {
@@ -62,7 +58,7 @@ export default {
     loading: {
       immediate: true,
       deep: true,
-      handler (newValue) {
+      handler(newValue) {
         if (newValue) {
           this.$nextTick(() => {
             this.loadingHeight = this.$refs.modal.offsetHeight
@@ -73,8 +69,8 @@ export default {
       }
     }
   },
-  created () {},
-  mounted () {
+  created() { },
+  mounted() {
     if (this.value) this.setClass(true)
   },
   methods: {
@@ -83,7 +79,7 @@ export default {
      * @param {Boolean} state 状态
      * @return {*}
      */
-    setClass (state) {
+    setClass(state) {
       if (state) {
         this.$refs.comModal.classList.remove('modal--hidden')
         this.$refs.comModal.classList.add('modal--visible')
@@ -92,14 +88,19 @@ export default {
         this.$refs.comModal.classList.add('modal--hidden')
       }
     },
-    close () {
+    close() {
       this.setClass(false)
       this.$emit('close', false)
     }
   }
+
 }
 </script>
 <style  lang="less" scoped>
+h1 {
+  font-size: 35px;
+}
+
 .modal-bg {
   visibility: hidden;
   position: fixed;
@@ -112,6 +113,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+
   .content-wrap {
     visibility: hidden;
     height: 80%;
@@ -125,24 +127,29 @@ export default {
     flex-flow: column;
     align-items: center;
     position: relative;
+
     header {
       padding-bottom: 20px
     }
+
     .close {
       box-sizing: border-box;
       padding: 14px;
       width: 100%;
       .flex-sbc;
+
       i {
         font-size: 25px;
         cursor: pointer;
       }
+
       .modal-name {
         font-size: 16px;
         font-weight: bold;
         line-height: 1;
       }
     }
+
     .content {
       box-sizing: border-box;
       padding: 0 20px;
@@ -151,6 +158,7 @@ export default {
       width: 100%;
       .public-scroll;
       position: relative;
+
       .modal-svg-wrapper {
         z-index: 999;
         position: fixed;
@@ -169,25 +177,31 @@ export default {
 
   &.modal--visible {
     animation: comModalWrap .3s linear forwards;
-    -webkit-animation: comModalWrap .3s linear forwards; /* Safari 和 Chrome */
+    -webkit-animation: comModalWrap .3s linear forwards;
+
+    /* Safari 和 Chrome */
     // animation-fill-mode: forwards; /* 动画结束保留属性值 */
     // -webkit-animation-fill-mode: forwards; /* Safari 和 Chrome */
     .content-wrap {
       visibility: visible;
       animation: comModalContent .2s linear forwards;
-      -webkit-animation: comModalContent .2s linear forwards; /* Safari 和 Chrome */
+      -webkit-animation: comModalContent .2s linear forwards;
+      /* Safari 和 Chrome */
     }
   }
 
   &.modal--hidden {
     animation: comModalWrapHide .3s linear forwards;
-    -webkit-animation: comModalWrapHide .3s linear forwards; /* Safari 和 Chrome */
+    -webkit-animation: comModalWrapHide .3s linear forwards;
+
+    /* Safari 和 Chrome */
     // animation-fill-mode: forwards; /* 动画结束保留属性值 */
     // -webkit-animation-fill-mode: forwards; /* Safari 和 Chrome */
     .content-wrap {
       visibility: hidden;
       animation: comModalContentHide .2s linear forwards;
-      -webkit-animation: comModalContentHide .2s linear forwards; /* Safari 和 Chrome */
+      -webkit-animation: comModalContentHide .2s linear forwards;
+      /* Safari 和 Chrome */
     }
   }
 }
@@ -198,6 +212,7 @@ export default {
     visibility: visible;
     z-index: 999;
   }
+
   to {
     visibility: visible;
     background: rgba(0, 0, 0, .4);
@@ -211,6 +226,7 @@ export default {
     visibility: visible;
     z-index: 999;
   }
+
   to {
     background: rgba(0, 0, 0, 0);
     visibility: hidden;
@@ -224,6 +240,7 @@ export default {
     opacity: 0;
     visibility: visible;
   }
+
   to {
     top: 0;
     opacity: 1;
@@ -237,6 +254,7 @@ export default {
     opacity: 1;
     visibility: visible;
   }
+
   to {
     top: 50px;
     opacity: 0;
@@ -249,13 +267,14 @@ export default {
   height: 42px;
   animation: comModalSvg 3s linear;
   animation-iteration-count: infinite;
+
   .path {
-    stroke-dasharray: 90,150;
+    stroke-dasharray: 90, 150;
     stroke-dashoffset: 0;
     stroke-width: 2;
     stroke: @color-primary;
     stroke-linecap: round;
-    animation: comModalSvgPath 2s cubic-bezier(1,.7,.5,.5);
+    animation: comModalSvgPath 2s cubic-bezier(1, .7, .5, .5);
     animation-iteration-count: infinite;
   }
 }
@@ -264,9 +283,11 @@ export default {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
+
   0% {
     transform: rotate(0deg);
   }
@@ -277,18 +298,22 @@ export default {
     stroke-dasharray: 150, 0;
     stroke-dashoffset: 150;
   }
+
   50% {
     stroke-dasharray: 90, 150;
     stroke-dashoffset: 90;
   }
+
   100% {
     stroke-dasharray: 150, 90;
     stroke-dashoffset: 0;
   }
+
   50% {
     stroke-dasharray: 90, 150;
     stroke-dashoffset: 90;
   }
+
   0% {
     stroke-dasharray: 150, 0;
     stroke-dashoffset: 150;

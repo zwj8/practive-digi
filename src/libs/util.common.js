@@ -1,7 +1,18 @@
 /* eslint-disable no-undef */
 import ls from 'local-storage'
+import { cookie } from '@/libs/util'
+import { COOKIE, CURRENT_MODE } from '@/constants'
+import { Message } from 'element-ui'
 
 const common = {}
+
+/**
+ * 是否开发环境
+ * @param {boolean} onlyDev 是否仅判断development环境
+ */
+common.isLocal = function (onlyDev = false) {
+  return CURRENT_MODE === 'local'
+}
 
 /**
  * 是否开发环境
@@ -293,6 +304,11 @@ common.firstLetterUppercase = str => {
   const strList = [...str]
   strList[0] = strList[0].toUpperCase()
   return strList.join('')
+}
+
+// 判断用户地区，询问用户是否需要切换到对应地区
+common.checkLocate = () => {
+  // 用户当前语言
 }
 
 export default common

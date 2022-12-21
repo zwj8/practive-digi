@@ -1,22 +1,13 @@
 <template>
-  <div class="form-areacode btn-areacode" @click="handleAreaCode">
+  <div class="form-areacode btn-areacode" @click="handleAreaCode" :class="{'disabled':disabeld}">
     <span class="form-areacode__checked btn-areacode" @click="handleAreaCode">
       {{ checkedAreaCodeLabel }}
       <i class="el-icon-arrow-down btn-areacode"></i>
     </span>
-    <div
-      v-show="areaCodeVisible"
-      ref="areaCode"
-      class="form-areacode__options"
-    >
+    <div v-show="areaCodeVisible" ref="areaCode" class="form-areacode__options">
       <div class="options-wrapper">
-        <span
-          class="options-item"
-          v-for="item in areaCodeOptions"
-          :key="item.addr"
-          @click.stop="handleChecked(item)"
-        >
-        {{ language == 'zh' ? `${item.name} ${item.code}` : `${item.abbr} ${item.code}` }}
+        <span class="options-item" v-for="item in areaCodeOptions" :key="item.addr" @click.stop="handleChecked(item)">
+          {{ lang == 'zh' ? `${item.name} ${item.code}` : `${item.abbr} ${item.code}` }}
         </span>
       </div>
     </div>
@@ -28,39 +19,60 @@ export default {
   name: 'ComAreaCode',
   components: {},
   filters: {},
-  props: {},
-  data () {
+  props: {
+    //父传子的对应的国家和区号
+    countryCode: {
+      type: Array,
+      required: false
+    },
+    // 语言
+    lang: { type: String, default: 'zh' },
+    // 是否可操作
+    disabeld: { type: Boolean, default: false }
+  },
+  data() {
     return {
       checkedAreaCodeLabel: '',
       areaCodeVisible: false
     }
   },
   computed: {
-    // 语言
-    ...mapGetters('global/i18n', ['language']),
+    //国家区号数据
     ...mapGetters('global/config', ['areaCodeOptions'])
   },
   watch: {
+    //对国家区号数据的监听
     areaCodeOptions: {
       immediate: true,
-      handler (value) {
+      handler(value) {
         if (value?.length) {
           this.handleChecked(value[0])
         }
       }
-    }
+    },
+    //对应默认监听的国家和区号
+    countryCode: {
+      immediate: true,
+      handler(value) {
+        if (value?.length) {
+          // console.log(value);
+          this.handleChecked(value[0])
+        }
+      }
+    },
+
   },
-  created () {
+  created() {
     this.$store.dispatch('global/config/check', 'areaCode')
     this.globalEvent()
   },
-  mounted () {},
+  mounted() { },
   methods: {
     /**
      * @description: 全局事件
      * @return {*}
      */
-    globalEvent () {
+    globalEvent() {
       // 全局点击事件
       document.querySelector('body').addEventListener('click', (evt) => {
         const className = evt.target.getAttribute('class')
@@ -76,7 +88,7 @@ export default {
      * @description: 点击打开区号选择
      * @return {*}
      */
-    handleAreaCode () {
+    handleAreaCode() {
       this.areaCodeVisible = true
     },
     /**
@@ -84,8 +96,8 @@ export default {
      * @param {*} item 被选项
      * @return {*}
      */
-    handleChecked (item) {
-      this.checkedAreaCodeLabel = this.language === 'zh'
+    handleChecked(item) {
+      this.checkedAreaCodeLabel = this.lang === 'zh'
         ? `${item.name} ${item.code}`
         : `${item.abbr} ${item.code}`
       this.areaCodeVisible = false
@@ -96,14 +108,17 @@ export default {
 </script>
 <style  lang="less" scoped>
 .form-areacode {
+
   cursor: pointer;
   position: relative;
   padding: 0 20px;
+
   &__checked {
     display: block;
     width: 100%;
     height: 100%;
   }
+
   &__options {
     position: absolute;
     top: -170px;
@@ -116,19 +131,22 @@ export default {
     box-shadow: 0 0 10px 0 @color-shadow;
     animation: areaCode ease-in-out .2s;
     -webkit-animation: areaCode ease-in-out .2s;
+
     .options {
-      &-wrapper{
+      &-wrapper {
         height: 400px;
         overflow-y: auto;
         overflow-x: hidden;
         .public-scroll;
       }
+
       &-item {
         box-sizing: border-box;
         display: block;
         padding: 5px;
         cursor: pointer;
         transition: all ease-in-out .2s;
+
         &:hover {
           background-color: @color-light-primary-20;
         }
@@ -142,10 +160,15 @@ export default {
       top: -150px;
       opacity: 0;
     }
+
     to {
       top: -170px;
       opacity: 1;
     }
   }
+}
+
+.disabled {
+  pointer-events: none;
 }
 </style>

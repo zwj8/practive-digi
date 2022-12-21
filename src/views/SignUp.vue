@@ -6,138 +6,71 @@
         <p>{{ $t('auth.signUp.desc') }}</p>
         <div class="line"></div>
       </header>
-      <el-form
-        ref="form"
-        :model="form"
-        :rules="rules"
-        label-width="110px"
-        label-position="right"
-      >
-        <el-form-item
-          class="style-reg-and-log-fix"
-          :label="$t('auth.email')"
-          prop="email"
-        >
-          <el-input
-            v-model="form.email"
-            :placeholder="$t('auth.placeholder_email')"
-          ></el-input>
+      <el-form ref="form" :model="form" :rules="rules" label-width="110px" label-position="right">
+        <el-form-item class="style-reg-and-log-fix" :label="$t('auth.email')" prop="email">
+          <el-input v-model="form.email" :placeholder="$t('auth.placeholder_email')"></el-input>
         </el-form-item>
-        <el-form-item
-          class="style-reg-and-log-fix"
-          :label="$t('auth.secret')"
-          prop="secret"
-        >
-          <el-input
-            v-model="form.secret"
-            type="password"
-            :placeholder="$t('auth.placeholder_secret')"
-          ></el-input>
+        <el-form-item class="style-reg-and-log-fix" :label="$t('auth.secret')" prop="secret">
+          <el-input v-model="form.secret" type="password" :placeholder="$t('auth.placeholder_secret')"></el-input>
         </el-form-item>
-        <el-form-item
-          class="style-reg-and-log-fix"
-          :label="$t('auth.comfirm_secret')"
-          prop="confirm_secret"
-        >
-          <el-input
-            v-model="form.confirm_secret"
-            type="password"
-            :placeholder="$t('auth.placeholder_comfirm_secret')"
-          ></el-input>
+        <el-form-item class="style-reg-and-log-fix" :label="$t('auth.comfirm_secret')" prop="confirm_secret">
+          <el-input v-model="form.confirm_secret" type="password"
+            :placeholder="$t('auth.placeholder_comfirm_secret')"></el-input>
         </el-form-item>
-        <el-form-item
-          class="style-reg-and-log-fix phone-select-fix"
-          :label="$t('auth.signUp.contact')"
-          prop="phone"
-        >
-          <el-input
-            v-model="form.phone"
-            :placeholder="$t('auth.signUp.placeholder_contact')"
-          >
-            <el-select
-              slot="prepend"
-              v-model="form.areaCode"
-              class="phone-code-select"
-            >
+        <el-form-item class="style-reg-and-log-fix phone-select-fix" :label="$t('auth.signUp.contact')" prop="phone">
+          <el-input v-model="form.phone" :placeholder="$t('auth.signUp.placeholder_contact')">
+            <!-- <el-select slot="prepend" v-model="form.areaCode" class="phone-code-select">
               <el-option label="+86" value="+86"></el-option>
-            </el-select>
+            </el-select> -->
           </el-input>
         </el-form-item>
         <el-form-item class="style-reg-and-log-fix" label="">
-          <el-input
-            v-model="form.captcha"
-            :placeholder="$t('auth.signUp.placeholder_captcha')"
-          >
-            <el-button
-              v-if="timerRun"
-              slot="prepend"
-              type="button"
-              class="phone-code-select"
-              >{{
+          <el-input v-model="form.captcha" :placeholder="$t('auth.signUp.placeholder_captcha')">
+            <el-button v-if="timerRun" slot="prepend" type="button" class="phone-code-select">{{
                 `${$t('auth.signUp.send_captcha')} (${timeSecouds} S)`
-              }}</el-button
-            >
-            <el-button
-              v-else
-              slot="prepend"
-              type="button"
-              class="phone-code-select"
-              @click.stop="sendCaptcha"
-              >{{ $t('auth.signUp.send_captcha') }}</el-button
-            >
+            }}</el-button>
+            <el-button v-else slot="prepend" type="button" class="phone-code-select" @click.stop="sendCaptcha">{{
+                $t('auth.signUp.send_captcha')
+            }}</el-button>
           </el-input>
         </el-form-item>
-        <el-form-item
-          class="style-reg-and-log-fix"
-          label-width="0"
-          prop="agree"
-        >
+        <el-form-item class="style-reg-and-log-fix" label-width="0" prop="agree">
           <div class="agreement-item">
             <el-checkbox v-model="form.agree">
               {{ $t('auth.signUp.agree_tips') }}
             </el-checkbox>
             &nbsp;
-            <span
-              class="text-primary pointer"
-              @click.stop="handlePolicy('service')"
-              >{{ $t('auth.signUp.service_agreement') }}</span
-            >
-            &nbsp;
-            <span :class="{ 'text-primary': form.agree }">{{
-              $t('auth.signUp.and')
+            <span class="text-primary pointer" @click.stop="handlePolicy('service')">{{
+                $t('auth.signUp.service_agreement')
             }}</span>
             &nbsp;
-            <span
-              class="text-primary pointer"
-              @click.stop="handlePolicy('privacy')"
-              >{{ $t('auth.signUp.privacy_clause') }}</span
-            >
+            <span :class="{ 'text-primary': form.agree }">{{
+                $t('auth.signUp.and')
+            }}</span>
+            &nbsp;
+            <span class="text-primary pointer" @click.stop="handlePolicy('privacy')">{{ $t('auth.signUp.privacy_clause')
+            }}</span>
           </div>
         </el-form-item>
         <div class="qr-code">
-          <el-image
-            :src="`${OSS_PREFIX}/default/service_qr_code.png`"
-            style="height: 135px; width: 135px"
-            alt="QR Code"
-          />
+          <el-image :src="`${OSS_PREFIX}/default/service_qr_code.png`" style="height: 135px; width: 135px"
+            alt="QR Code" />
           <span class="desc">{{ $t('auth.signUp.customer_serivce') }}</span>
         </div>
       </el-form>
       <div class="btn-register-wrap">
         <com-btn @click.native="register">{{
-          $t('auth.signUp.btn_create')
+            $t('auth.signUp.btn_create')
         }}</com-btn>
       </div>
       <p class="footer-tips">
         <span class="text-gray">{{ $t('auth.signUp.has_account') }}</span>
-        <el-link :underline="false" type="primary" @click="$router.push({ name: 'login' })">{{ $t('auth.signUp.to_login') }}</el-link>
+        <el-link :underline="false" type="primary" @click="$router.push({ name: 'login' })">{{
+            $t('auth.signUp.to_login')
+        }}</el-link>
       </p>
     </div>
-    <prat-agreement
-      :show="policyShow"
-      :type="policyType"
-      @close="closePolicy"
-    />
+    <prat-agreement :show="policyShow" :type="policyType" @close="closePolicy" />
   </div>
 </template>
 <script>
@@ -150,16 +83,16 @@ export default {
   components: {
     PratAgreement
   },
-  created () {
+  created() {
     this.getQuery()
   },
   computed: {
-    signUpTitle () {
+    signUpTitle() {
       if (this.form?.duid) return this.$t('auth.signUp.title_active')
       else return this.$t('auth.signUp.title')
     }
   },
-  data () {
+  data() {
     const validateConfirmPassword = (rule, value, callback) => {
       if (value !== this.form.secret) {
         callback(new Error(this.$t('valid.confirm_secret_error')))
@@ -221,7 +154,7 @@ export default {
   watch: {
     form: {
       deep: true,
-      handler (newValue) {
+      handler(newValue) {
         this.btnDisabled = false
         for (const key in newValue) {
           if (key === 'agree' && newValue[key] === false) {
@@ -235,7 +168,7 @@ export default {
       }
     }
   },
-  mounted () {
+  mounted() {
     this.loading = false
     // 利用本地缓存保存倒计时状态
     const timeStamp = util.lsGet('timestamp')
@@ -245,7 +178,7 @@ export default {
   },
   methods: {
     // 获取URL参数
-    getQuery () {
+    getQuery() {
       if (this.$route.name !== 'distrActive' && !this.$route.query?.duid) return
       const urlParams = this.$route.query
       if (urlParams?.duid) {
@@ -256,7 +189,7 @@ export default {
       }
     },
     // 发送验证码
-    sendCaptcha () {
+    sendCaptcha() {
       if (this.form.phone === '') {
         this.$message({
           type: 'warning',
@@ -288,7 +221,7 @@ export default {
         }
       })
     },
-    register () {
+    register() {
       this.$refs.form.validate(async (valid) => {
         if (valid) {
           this.loading = true
@@ -323,15 +256,15 @@ export default {
       })
     },
     // 协议
-    handlePolicy (type) {
+    handlePolicy(type) {
       this.policyType = type
       this.policyShow = true
     },
-    closePolicy () {
+    closePolicy() {
       this.policyShow = false
     },
     // 发送验证码后设置倒计时
-    countdown (ts) {
+    countdown(ts) {
       const now = new Date()
       this.timeSecouds = ts
         ? parseInt((ts - now.getTime()) / 1000) <= 0
@@ -364,22 +297,27 @@ export default {
 </script>
 <style  lang="less" scoped>
 @import '@/assets/part/part.auth.less';
+
 .register-page {
   .reglog-public;
 }
-.el-checkbox__input.is-checked + .el-checkbox__label {
+
+.el-checkbox__input.is-checked+.el-checkbox__label {
   color: inherit;
 }
+
 .btn-register-wrap {
   display: flex;
   justify-content: center;
 }
+
 .footer-tips {
   display: flex;
   justify-content: center;
   font-size: 14px;
   margin-top: 33px;
 }
+
 .phone-code-select {
   width: 160px;
 }
@@ -391,6 +329,7 @@ export default {
 
 .el-form {
   position: relative;
+
   .qr-code {
     display: flex;
     flex-flow: column;
@@ -400,10 +339,12 @@ export default {
     position: absolute;
     right: -150px;
     bottom: 0;
+
     img {
       height: 135px;
       width: 135px;
     }
+
     .desc {
       font-size: 16px;
       margin-top: 12px;

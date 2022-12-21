@@ -1,5 +1,7 @@
 import cookie from '@/libs/util.cookie'
+import stote from '@/store'
 import { COOKIE, COOKIE_DOMAIN } from '@/constants'
+import store from '@/store'
 
 const auth = {}
 
@@ -75,6 +77,21 @@ auth.setAid = function (aid) {
 auth.getAid = function () {
   return cookie.get(COOKIE.AID)
 }
+
+// 获取用户当前定位
+auth.getLocate = function () {
+  store.dispatch('global/config/checkLocate')
+}
+
+// 设置用户地区
+auth.setLocate = function (locate) {
+  cookie.set(COOKIE.LOCATE, locate, { domain: COOKIE_DOMAIN, expires: 7 })
+}
+
+// 获取用户地区
+// auth.getLocate = function () {
+//   return cookie.get(COOKIE.LOCATE)
+// }
 
 export default {
   ...auth

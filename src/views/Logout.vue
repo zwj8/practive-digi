@@ -8,14 +8,37 @@
 
 <script>
 import AUTH_API from '@/api/auth'
-
+import store from '@/store'
 export default {
   data () {
     return {
-      tips: '正在退出登录...'
+      tips: null,
+      locate: null
     }
   },
+  created () {
+    // 根据用户定位判断展示语言
+    this.setLanguage()
+  },
   methods: {
+    /**
+     * @description: 根据用户定位，判断展示语言
+     * @return {*}
+     */
+    setLanguage () {
+      this.locate = this.$route.query?.locate
+      let _lang = ''
+      switch (this.locate) {
+        case 'CN':
+          _lang = 'zh'
+          break
+        case 'US':
+          _lang = 'en'
+          break
+      }
+      store.commit('global/i18n/setLanguage', _lang)
+      this.tips = this.$t('n_auth.msg.logouting')
+    },
     logout () {
       AUTH_API.Logout().then(res => {
         if (res?.success === true) {
@@ -23,19 +46,23 @@ export default {
             window.location.href = this.$route.query?.callback
           } else {
             const appKey = this.$route.query?.appKey
+            // 根据用户定位，判断退出到哪个登录页面
+            let routerName = this.locate === 'CN'
+              ? 'login'
+              : 'usLogin'
             this.$router.push({
-              name: 'login',
+              name: routerName,
               query: {
                 appKey: appKey
               }
             })
           }
         } else {
-          this.tips = '退出登录失败，请刷新页面重试！'
+          this.tips = this.$t('n_auth.msg.logout_faild')
         }
       }).catch(e => {
         console.log(e)
-        this.tips = '退出登录失败，请刷新页面重试！'
+        this.tips = this.$t('n_auth.msg.logout_faild')
       })
     }
   },

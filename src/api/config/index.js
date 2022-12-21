@@ -1,3 +1,4 @@
+import axios from '@/api/axios'
 const OSS_AREA_CODE = 'https://digiads-fron-config.oss-cn-guangzhou.aliyuncs.com/area-code-config.json'
 
 /**
@@ -18,6 +19,10 @@ const _getAreaCode = async () => {
   }
 }
 
+// 获取国家
+const _getRegion = () => { return axios.get('/config/options/region') }
+
 export default {
-  getAreaCode: _getAreaCode
+  getAreaCode: _getAreaCode,
+  getRegion: _getRegion
 }

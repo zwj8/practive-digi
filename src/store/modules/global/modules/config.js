@@ -1,10 +1,11 @@
 import util from '@/libs/util'
-import { TIME } from '@/constants'
+import { TIME, COOKIE } from '@/constants'
 import CONFIG from '@/api/config'
 export default {
   namespaced: true,
   state: {
-    areaCode: null
+    areaCode: null,
+    region: null
   },
   getters: {
     // 获取手机区号
@@ -75,6 +76,47 @@ export default {
         data: result
       }
       util.lsSet(key, value)
+    },
+    /**
+     * @description: 检查state是否有region
+     * @param {*} dispatch
+     * @param {*} state
+     * @return {*}
+     */
+    async checkRegion ({ dispatch, state }) {
+      // 已经加载了，直接返回
+      if (state?.region) return
+      // 没有加载，调用加载方法
+      await dispatch('loadRegion')
+    },
+    /**
+     * @description: 加载region
+     * @param {*} dispatch
+     * @param {*} commit
+     * @return {*}
+     */
+    async loadRegion ({ dispatch, commit, state }) {
+      const localRegion = localStorage.getItem('region')
+      // 如果有缓存，则读取缓存数据
+      if (localRegion) commit('setRegion', JSON.parse(localRegion))
+      // 没有缓存，调用接口
+      else if (state.timer) await dispatch('loadRegionRemote')
+    },
+    /**
+     * @description: 调用接口获取region
+     * @param {*} commit
+     * @return {*}
+     */
+    async loadRegionRemote ({ commit }) {
+      commit('setTimer')
+      await CONFIG.GetRegion().then(async res => {
+        let regionList = null
+        if (res.length) regionList = res.map(v => ({ label: v.zhName, value: v.code }))
+        if (regionList) {
+          await commit('setRegion', regionList)
+          await localStorage.setItem('region', JSON.stringify(regionList))
+        }
+      })
     }
   }
 }

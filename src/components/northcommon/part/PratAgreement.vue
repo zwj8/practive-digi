@@ -1,423 +1,1296 @@
 <template>
   <com-modal :value="show" @close="close">
     <template #title>
-      <h1 v-if="type === 'privacy'" class="title">东坤 Digi Ads 隐私政策</h1>
-      <h1 v-else-if="type === 'service'" class="title">东坤 Digi Ads 服务协议</h1>
+      <h1 v-if="type === 'privacy'" class="title">PrivacyPolicy</h1>
+      <h1 v-else-if="type === 'service'" class="title">TermsAndConditions</h1>
       <h1 v-else-if="type === 'cookie'" class="title">Cookie 政策</h1>
     </template>
     <div class="content">
       <template v-if="type === 'privacy'">
-        <p>隐私政策更新（日期：2022-3-20）</p>
-        <h2>产品介绍</h2>
-        <p>
-          广州市东坤信息科技有限公司是东坤DigiAds（以下简称【我们】）的运营者。本《隐私政策》（以下简称【本政策】）阐述了东坤DigiAds将如何收集和处理您的个人信息和隐私信息。东坤DigiAds将严格遵守法律法规，为您提供安全、可靠的服务。网站地址：www.superdigiads.com。
-        </p>
-        <h2>我们收集的信息</h2>
-        <p>
-          为了向您提供我们的服务，我们需要您提供使用该服务所必需的信息。我们只会收集为实现具体、特定、明确及合法的目的所必需的信息，并且不会对这些信息进行与上述目的不相符的进一步处理。您有权选择是否提供我们请求的信息，但多数情况下，如果您拒绝，我们可能无法向你提供相应的服务，也无法回应您遇到的问题。
-        </p>
-        <h2>您在使用我们服务时主动提供的信息</h2>
-        <p>
-          我们接收并存储您在东坤DigiAds上或以其他任何方式提供给我们的任何信息，包括邮箱、名字、电话号码、地址等。您可以选择不提供某些信息，但是这样可能使您无法使用我们提供的许多服务。
-        </p>
-        <h2>我们在您使用服务过程中收集的信息</h2>
-        <p>在您使用我们提供的服务时，我们可能会收集以下信息：</p>
+        <h2>PRIVACY NOTICE</h2>
+        <h3>Last updated June 24, 2022</h3>
+        <p> This privacy notice for ADSEASY PTE.LTD. ("<strong>Company</strong>,"
+          "<strong>we</strong>,"
+          "<strong>us</strong>,"
+          or "<strong>our</strong>"), describes how and why we might
+          collect, store, use, and/or share ("<strong>process</strong>")
+          your information when you use our services ("<strong>Services</strong>"), such as
+          when you:</p>
         <ul>
-          <li>设备及应用信息。如设备型号、设备识别符、操作系统版本、信号强度、应用版本号、浏览器类型和设置等信息。</li>
-          <li>
-            移动网络信息。如公共陆地移动网络提供商 ID（PLMN）、地理位置（设备定位所在区域信号发射塔识别信息）、Internet
-            协议（IP）地址。
-          </li>
-          <li>
-            日志信息。当你使用我们的服务或者查看由我们提供的内容时，我们会自动收集某些信息并存储在日志中。如服务的访问时间、访问次数、访问
-            IP、错误崩溃信息、网络请求信息等。
-          </li>
-          <li>
-            位置信息。当您使用与位置有关的服务时，我们可能会采集您设备所在的位置信息，以便为您提供相关服务。在您使用服务时，我们可能会通过
-            IP 地址、GPS、WLAN（如 Wi-Fi）或基站等途径获取您的地理位置信息。例如地区、经纬度信息、时区设置和语言设置
-          </li>
-          <li>索引词信息。当您使用我们提供的索引服务时，我们会收集您的索引词信息，以便提供高效的索引服务。</li>
-          <li>为了帮助您更好地使用我们的产品或服务，我们会收集相关信息。</li>
+          <li>Visit our website at <a href="http://www.superdigiads.com/">
+              http://www.superdigiads.com/</a>, or any
+            website of ours that links to this privacy notice </li>
+          <li>Engage with us in other related ways, including any sales,
+            marketing, or events</li>
         </ul>
-        <h2>从第三方合作伙伴获取的信息</h2>
+        <span>
+          <strong>Questions or concerns?</strong>
+          Reading this privacy notice will help you understand your privacy rights and choices.
+          If you do not agree with our policies and practices, please do not use our Services.
+          If you still have any questions or concerns, please contact us at <a href="service@superdigiads.com">
+            service@superdigiads.com</a>.
+        </span> <br>
+        <h3>SUMMARY OF KEY POINTS</h3>
+        <h4>
+          This summary provides key points from our privacy notice, but you can find out
+          more details about any of these topics by clicking the link following each key
+          point or by using our table of contents below to find the section you are looking
+          for. You can also click here to go directly to our table of contents.
+        </h4>
+        <span>
+          <strong>What personal information do we process?</strong>
+           When you visit, use, or navigate our Services, we may process personal
+          information depending on how you interact with ADSEASY PTE.LTD. and the Services,
+          the choices you make, and the products and features you use. Click here to learn
+          more.
+        </span> <br>
+        <span>
+          <strong>Do we process any sensitive personal information?</strong>
+          We do not process sensitive personal information.
+        </span><br>
+        <span>
+          <strong>Do we receive any information from third parties?</strong>
+           We may receive information from public databases,
+          marketing partners, social media platforms, and other
+          outside sources. Click here to learn more.
+        </span> <br>
+        <span>
+          <strong>How do we process your information?</strong>
+          We process your information to provide, improve, and administer
+          our Services, communicate with you, for security and fraud prevention,
+          and to comply with law. We may also process your information for other
+          purposes with your consent. We process your information only when we
+          have a valid legal reason to do so. Click here to learn more.
+        </span> <br>
+        <span>
+          <strong>In what situations and with which parties do we share personal information? </strong>
+          We may share information in specific situations and with specific third
+          parties. Click here to learn more.
+        </span> <br>
+        <span>
+          <strong>How do we keep your information safe?</strong>
+           We have organizational and technical processes and procedures in place to
+          protect your personal information. However, no electronic transmission over
+          the internet or information storage technology can be guaranteed to be 100%
+          secure, so we cannot promise or guarantee that hackers, cybercriminals,
+          or other unauthorized third parties will not be able to defeat our security
+          and improperly collect, access, steal, or modify your information.
+          Click here to learn more.
+        </span> <br>
+        <span>
+          <strong>What are your rights?</strong>
+          Depending on where you are located geographically, the applicable privacy
+          law may mean you have certain rights regarding your personal information.
+          Click here to learn more.
+        </span> <br>
+        <span>
+          <strong>How do you exercise your rights? </strong>
+           The easiest way to exercise your rights is by contacting us.
+          We will consider and act upon any request in accordance with applicable
+          data protection laws.
+        </span> <br>
+        <p>Want to learn more about what ADSEASY PTE.LTD. does with any information we collect? Click here to review the
+          notice in full.</p>
+
+        <h2>TABLE OF CONTENTS</h2>
+        <p>1. WHAT INFORMATION DO WE COLLECT?</p>
+        <p>2. HOW DO WE PROCESS YOUR INFORMATION?</p>
+        <p>3. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR PERSONAL INFORMATION?</p>
+        <p>4. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</p>
+        <p>5. WHAT IS OUR STANCE ON THIRD-PARTY WEBSITES?</p>
+        <p>6. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?</p>
+        <p>7. HOW LONG DO WE KEEP YOUR INFORMATION?</p>
+        <p>8. HOW DO WE KEEP YOUR INFORMATION SAFE?</p>
+        <p>9. DO WE COLLECT INFORMATION FROM MINORS?</p>
+        <p>10. WHAT ARE YOUR PRIVACY RIGHTS?</p>
+        <p>11. CONTROLS FOR DO-NOT-TRACK FEATURES</p>
+        <p>12. DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</p>
+        <p>13. DO WE MAKE UPDATES TO THIS NOTICE?</p>
+        <p>14. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</p>
+        <p>15. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</p>
+
+        <h2>1. WHAT INFORMATION DO WE COLLECT?</h2>
+        <h3>Personal information you disclose to us</h3>
+
+        <span>
+          <strong>In Short:  </strong>
+          We collect personal information that you provide to us.
+        </span> <br>
+
         <p>
-          在法律允许的情况下，我们还会从公用和商用来源获取有关您的信息。例如，我们可能从第三方社交网络服务中获取某些信息，例如账户、昵称等。
+          We collect personal information that you voluntarily provide to us when
+          you register on the Services, express an interest in obtaining information
+          about us or our products and Services, when you participate in activities
+          on the Services, or otherwise when you contact us.
         </p>
-        <p>征得授权同意的例外</p>
-        <p>您充分理解并同意，我们在以下情况下收集、使用您的个人信息无需您的授权同意：</p>
-        <p>1、与国家安全、国防安全有关的；</p>
-        <p>2、与公共安全、公共卫生、重大公共利益有关的；</p>
-        <p>3、与犯罪侦查、起诉、审判和判决执行等司法或行政执法有关的；</p>
-        <p>4、出于维护您或他人的生命财产安全但在特殊情况下无法获得您的及时授权；</p>
-        <p>5、从其他合法公开的渠道中收集您的个人信息；</p>
-        <p>6、法律法规规定的其他情形。</p>
-        <h2>我们如何使用收集的信息</h2>
+        <span>
+          <strong>Personal Information Provided by You.</strong>
+          The personal information that we collect depends on the context of your
+          interactions with us and the Services, the choices you make, and the
+          products and features you use. The personal information we collect may
+          include the following:
+        </span>
+        <ul>
+          <li>names</li>
+          <li>email addresses</li>
+          <li>mailing addresses</li>
+          <li>usernames</li>
+          <li>passwords</li>
+          <li>billing addresses</li>
+          <li>debit/credit card numbers</li>
+          <li>phone numbers</li>
+        </ul>
+        <span>
+          <strong>Sensitive Information.</strong>
+          We do not process sensitive information.
+        </span> <br>
+
+        <span>
+          <strong>Payment Data.</strong>
+          We may collect data necessary to process your payment if you make
+          purchases, such as your payment instrument number (such as a credit
+          card number), and the security code associated with your payment
+          instrument. All payment data is stored by WeChat Pay, Alipay, Visa,
+           PayPal and Mastercard. You may find their privacy notice link(s)
+        </span> <br>
+        <p>here: <a
+            href="https://www.wechat.com/en/privacy_policy.html">https://www.wechat.com/en/privacy_policy.html,</a><br>
+          <a
+            href="https://global.alipay.com/docs/ac/Platform/privacy">https://global.alipay.com/docs/ac/Platform/privacy.</a><br>
+          <a
+            href=" https://usa.visa.com/legal/privacy-policy.html">https://usa.visa.com/legal/privacy-policy.html.</a><br>
+          <a
+            href="https://www.paypal.com/myaccount/privacy/privacyhub">https://www.paypal.com/myaccount/privacy/privacyhub</a>
+          <br>and 
+          <a
+            href="https://www.mastercard.com/global/en/vision/corp-responsibility/commitment-to-privacy/privacy.html">https://www.mastercard.com/global/en/vision/corp-responsibility/commitment-to-privacy/privacy.html.</a>
+        </p>
+        <p>All personal information that you provide to us must be true, complete, and accurate,
+          and you must notify us of any changes to such personal information.</p>
+        <h4>Information automatically collected</h4>
+        <span>
+          <strong>In Short: </strong>
+          Some information — such as your Internet Protocol (IP) address and/or browser and device
+          characteristics — is collected automatically when you visit our Services.
+        </span> <br>
+        <p>We automatically collect certain information when you visit, use, or navigate the Services.
+          This information does not reveal your specific identity (like your name or contact information)
+          but may include device and usage information, such as your IP address, browser and device
+          characteristics, operating system, language preferences, referring URLs, device name, country,
+          location, information about how and when you use our Services, and other technical information.
+          This information is primarily needed to maintain the security and operation of our Services,
+          and for our internal analytics and reporting purposes.</p>
+        <p>The information we collect includes:</p>
+        <ul>
+          <li>Log and Usage Data. Log and usage data is service-related, diagnostic, usage, and performance
+            information our servers automatically collect when you access or use our Services and which we
+            record in log files. Depending on how you interact with us, this log data may include your IP
+            address, device information, browser type, and settings and information about your activity
+            in the Services (such as the date/time stamps associated with your usage, pages and files viewed,
+            searches, and other actions you take such as which features you use), device event information
+            (such as system activity, error reports (sometimes called "crash dumps"), and hardware settings).</li>
+          <li>Device Data. We collect device data such as information about your computer, phone, tablet, or
+            other device you use to access the Services. Depending on the device used, this device data may
+            include information such as your IP address (or proxy server), device and application
+            identification numbers, location, browser type, hardware model, Internet service provider
+            and/or mobile carrier, operating system, and system configuration information.</li>
+          <li>Location Data. We collect location data such as information about your device's location,
+            which can be either precise or imprecise. How much information we collect depends on the type
+            and settings of the device you use to access the Services. For example, we may use GPS and
+            other technologies to collect geolocation data that tells us your current location
+            (based on your IP address). You can opt out of allowing us to collect this information either
+            by refusing access to the information or by disabling your Location setting on your device.
+            However, if you choose to opt out, you may not be able to use certain aspects of the Services.</li>
+        </ul>
+        <h3>Information collected from other sources</h3>
+        <span>
+          <strong>In Short: </strong>
+          We may collect limited data from public databases, marketing partners, and other outside
+          sources.
+        </span> <br>
+        <p>In order to enhance our ability to provide relevant marketing, offers, and services to you and
+          update our records, we may obtain information about you from other sources, such as public
+          databases, joint marketing partners, affiliate programs, data providers, and from other third
+          parties. This information includes mailing addresses, job titles, email addresses, phone numbers,
+          intent data (or user behavior data), Internet Protocol (IP) addresses, social media profiles,
+          social media URLs, and custom profiles, for purposes of targeted advertising and event promotion.
+        </p>
+        <h2>2. HOW DO WE PROCESS YOUR INFORMATION?</h2>
+        <span>
+          <strong>In Short: </strong>
+          We process your information to provide, improve, and administer our Services,
+          communicate with you, for security and fraud prevention, and to comply with
+          law. We may also process your information for other purposes with your consent.
+        </span> <br>
+        <h4>We process your personal information for a variety of reasons, depending on how
+          you interact with our Services, including:</h4>
+        <ul>
+          <li>
+            <strong>To facilitate account creation and authentication and otherwise manage user
+
+              accounts.</strong>
+            We may process your information so you can create and log in to your account,
+            as well as keep your account in working order.
+
+          </li>
+          <li>
+
+            <strong>To request feedback.</strong>
+             We may process your information when necessary to request feedback and to
+            contact you about your use of our Services.
+
+          </li>
+          <li>
+
+            <strong>To send you marketing and promotional communications.</strong>
+             We may process the personal information you send to us for our marketing
+            purposes, if this is in accordance with your marketing preferences.
+            You can opt out of our marketing emails at any time. For more information,
+            see "WHAT ARE YOUR PRIVACY RIGHTS?" below).
+
+          </li>
+          <li>
+
+            <strong>To deliver targeted advertising to you.</strong>
+            We may process your information to develop and display personalized content
+            and advertising tailored to your interests, location, and more.
+
+          </li>
+          <li>
+
+            <strong>To protect our Services. </strong>
+             We may process your information as part of our efforts to keep our Services
+            safe and secure, including fraud monitoring and prevention.
+
+          </li>
+          <li>
+            <strong>To save or protect an individual's vital interest. </strong>
+            We may process your information when necessary to save or protect an
+            individual’s vital interest, such as to prevent harm.
+
+          </li>
+        </ul>
+        <h2>3. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR INFORMATION?</h2>
+        <span>
+          <strong>In Short: </strong>
+          We only process your personal information when we believe it is
+          necessary and we have a valid legal reason (i.e., legal basis) to
+          do so under applicable law, like with your consent, to comply
+          with laws, to provide you with services to enter into or fulfill 
+          our contractual obligations, to protect your rights, or to fulfill
+           our legitimate business interests.
+        </span> <br>
+        <h3 style="text-decoration:underline ;">If you are located in the EU or UK, this section applies to you.</h3>
+        <p>The General Data Protection Regulation (GDPR) and UK GDPR require us to
+          explain the valid legal bases we rely on in order to process your personal
+          information. As such, we may rely on the following legal bases to
+          process your personal information:</p>
+        <ul>
+          <li>
+
+            <strong>Consent.</strong>
+            We may process your information if you have given us permission
+            (i.e., consent) to use your personal information for a specific
+            purpose. You can withdraw your consent at any time. Click here 
+            to learn more.
+
+          </li>
+          <li>
+
+            <strong>Legitimate Interests. </strong>
+            We may process your information when we believe it is reasonably
+            necessary to achieve our legitimate business interests and those
+            interests do not outweigh your interests and fundamental rights
+            and freedoms. For example, we may process your personal information
+            for some of the purposes described in order to:
+
+          </li>
+          <li>
+            Send users information about special offers and discounts on our
+            products and services
+          </li>
+          <li>
+            Develop and display personalized and relevant advertising content
+            for our users
+          </li>
+          <li>
+            Diagnose problems and/or prevent fraudulent activities
+          </li>
+          <li>
+            Understand how our users use our products and services so we can
+            improve user experience
+          </li>
+          <li>
+
+            <strong>Legal Obligations. </strong>
+            We may process your information where we believe it is necessary
+            for compliance with our legal obligations, such as to cooperate with
+            a law enforcement body or regulatory agency, exercise or defend our
+            legal rights, or disclose your information as evidence in litigation
+            in which we are involved.
+
+          </li>
+          <li>
+
+            <strong>Vital Interests.</strong>
+            We may process your information where we believe it is necessary to
+            protect your vital interests or the vital interests of a third party,
+            such as situations involving potential threats to the safety of any
+            person.
+
+          </li>
+        </ul>
+        <h3 style="text-decoration:underline ;">If you are located in Canada, this section applies to you.</h3>
         <p>
-          我们严格遵守法律法规的规定及与用户的约定，将收集的信息用于本政策所说明的用途。我们可能将您的个人信息用于以下用途：
+          We may process your information if you have given us specific permission
+          (i.e., express consent) to use your personal information for a specific
+          purpose, or in situations where your permission can be inferred (i.e., implied
+          consent). You can withdraw your consent at any time. Click here to learn
+          more.
         </p>
-        <p>1、提供个性化用户服务和内容；</p>
-        <p>2、向你发送营销资讯，包括我们的业务信息和我们认为您可能感兴趣的第三方业务；</p>
-        <p>3、管理我们的业务；</p>
-        <p>4、向第三方提供有关我们用户的统计信息；</p>
-        <p>5、用于防止丢失和防止欺诈等目的的安全保障，协助识别用户、验证身份等；</p>
-        <p>6、进行相关的推广活动</p>
-        <p>7、进行数据分析、研究和开发与我们服务的使用相关的统计信息；</p>
-        <p>8、储存并维护与您相关的信息，用于我们的业务运营或履行法律义务；</p>
-        <p>9、提供基于位置的服务；</p>
-        <p>10、发送通知；</p>
-        <p>11、改善用户体验；</p>
-        <p>12、其他征得您同意的目的；</p>
-        <h2>我们如何使用 Cookie 和同类技术</h2>
-        <h3>Cookie</h3>
-        <p>
-          Cookie 是一种网络服务器存储在计算机或移动设备上的纯文本文件。Cookie 的内容智能由创建它的服务器检索或读取。每个
-          Cookie 对您的网络浏览器或移动应用程序都是唯一的。Cookie 通常包含标识符、站点名称等。
+        <p>In some exceptional cases, we may be legally permitted under applicable
+          law to process your information without your consent, including,
+          for example:</p>
+        <ul>
+          <li>If collection is clearly in the interests of an individual and consent cannot be obtained in a timely way
+          </li>
+          <li>For investigations and fraud detection and prevention</li>
+          <li>For business transactions provided certain conditions are met</li>
+          <li>If it is contained in a witness statement and the collection is necessary to assess, process, or settle an
+            insurance claim</li>
+          <li>For identifying injured, ill, or deceased persons and communicating with next of kin</li>
+          <li>If we have reasonable grounds to believe an individual has been, is, or may be victim of financial abuse
+          </li>
+          <li>If it is reasonable to expect collection and use with consent would
+            compromise the availability or the accuracy of the information and the
+            collection is reasonable for purposes related to investigating a breach
+            of an agreement or a contravention of the laws of Canada or a province</li>
+          <li>If disclosure is required to comply with a subpoena, warrant, court
+            order, or rules of the court relating to the production of records</li>
+          <li>If it was produced by an individual in the course of their employment,
+            business, or profession and the collection is consistent with the
+            purposes for which the information was produced</li>
+          <li>If the collection is solely for journalistic, artistic, or literary purposes</li>
+          <li>If the information is publicly available and is specified by the regulations</li>
+        </ul>
+        <h2>4. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</h2>
+        <span>
+          <strong>In Short:</strong>
+          We may share information in specific situations described in this
+          section and/or with the following third parties.
+        </span> <br>
+        <p>We may need to share your personal information in the following
+          situations:</p>
+        <ul>
+          <li>
+
+            <strong>Business Transfers.</strong>
+            We may share or transfer your information in connection with,
+            or during negotiations of, any merger, sale of company assets,
+            financing, or acquisition of all or a portion of our business to
+            another company.
+
+          </li>
+          <li>
+
+            <strong>Affiliates. </strong>
+             We may share your information with our affiliates, in which
+            case we will require those affiliates to honor this privacy
+            notice. Affiliates include our parent company and any
+            subsidiaries, joint venture partners, or other companies that
+            we control or that are under common control with us.
+
+          </li>
+          <li>
+
+            <strong>Business Partners.</strong>
+             We may share your information with our business partners to
+            offer you certain products, services, or promotions.
+
+          </li>
+        </ul>
+        <h2>5. WHAT IS OUR STANCE ON THIRD-PARTY WEBSITES?</h2>
+        <span>
+          <strong>In Short:</strong>
+          We are not responsible for the safety of any information that you
+          share with third parties that we may link to or who advertise on
+          our Services, but are not affiliated with, our Services.
+        </span> <br>
+        <p>The Services may link to third-party websites, online services,
+          or mobile applications and/or contain advertisements from third
+          parties that are not affiliated with us and which may link to other
+          websites, services, or applications. Accordingly, we do not make
+          any guarantee regarding any such third parties, and we will not
+          be liable for any loss or damage caused by the use of such
+          third-party websites, services, or applications. The inclusion
+          of a link towards a third-party website, service, or application
+          does not imply an endorsement by us. We cannot guarantee the safety
+          and privacy of data you provide to any third parties. Any data
+          collected by third parties is not covered by this privacy notice.
+          We are not responsible for the content or privacy and security
+          practices and policies of any third parties, including other
+          websites, services, or applications that may be linked to or
+          from the Services. You should review the policies of such third
+          parties and contact them directly to respond to your questions.
         </p>
-        <p>
-          我们有时会在在您的设备上存储 Cookie，我们启用 Cookie
-          的目的在于改善用户体验，包括登录和验证、存储您的偏好和设置、统计分析、基于兴趣的广告等。您可根据自己的偏好管理、删除、禁用
-          Cookie。但清除或禁用 Cookie 可能会影响您使用我们提供的服务的全部或部分功能。
+        <h2>6. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?</h2>
+        <span>
+          <strong>In Short:</strong>
+          We may use cookies and other tracking technologies to collect and
+          store your information.
+        </span> <br>
+        <p>We may use cookies and similar tracking technologies (like web beacons and
+          pixels) to access or store information. Specific information about how we
+          use such technologies and how you can refuse certain cookies is set out in
+          our Cookie Notice.</p>
+
+        <h2>7. HOW LONG DO WE KEEP YOUR INFORMATION?</h2>
+        <span>
+          <strong>In Short:</strong>
+          We keep your information for as long as necessary to fulfill the purposes
+          outlined in this privacy notice unless otherwise required by law.
+        </span> <br>
+        <p>We will only keep your personal information for as long as it is
+          necessary for the purposes set out in this privacy notice, unless a
+          longer retention period is required or permitted by law (such as tax,
+          accounting, or other legal requirements). No purpose in this notice
+          will require us keeping your personal information for longer than 
+          the period of time in which users have an account with us.</p>
+        <p>When we have no ongoing legitimate business need to process your personal
+          information, we will either delete or anonymize such information, or,
+          if this is not possible (for example, because your personal information
+          has been stored in backup archives), then we will securely store your
+          personal information and isolate it from any further processing until
+          deletion is possible.</p>
+
+        <h2>8. HOW DO WE KEEP YOUR INFORMATION SAFE?</h2>
+        <span>
+          <strong>In Short:</strong>
+           We aim to protect your personal information through a system of organizational
+           and technical security measures.
+        </span> <br>
+        <p>We have implemented appropriate and reasonable technical and 
+          organizational security measures designed to protect the security
+          of any personal information we process. However, despite our safeguards
+          and efforts to secure your information, no electronic transmission
+          over the Internet or information storage technology can be guaranteed
+          to be 100% secure, so we cannot promise or guarantee that hackers,
+          cybercriminals, or other unauthorized third parties will not be
+          able to defeat our security and improperly collect, access, steal,
+          or modify your information. Although we will do our best to protect
+          your personal information, transmission of personal information to
+          and from our Services is at your own risk. You should only access
+          the Services within a secure environment.</p>
+        <h2>9. DO WE COLLECT INFORMATION FROM MINORS?</h2>
+        <span>
+          <strong>In Short:</strong>
+          We do not knowingly collect data from or market to children under 18 years of age.
+        </span> <br>
+        <p>We do not knowingly solicit data from or market to children under 18
+          years of age. By using the Services, you represent that you are a
+          t least 18 or that you are the parent or guardian of such a minor
+          and consent to such minor dependent’s use of the Services. If we
+          learn that personal information from users less than 18 years of
+          age has been collected, we will deactivate the account and take
+          reasonable measures to promptly delete such data from our records.
+          If you become aware of any data we may have collected from
+          children under age 18, please contact
+          us at <a href=" service@superdigiads.com"> service@superdigiads.com</a>.</p>
+
+        <h2>10. WHAT ARE YOUR PRIVACY RIGHTS?</h2>
+        <span>
+          <strong>In Short:</strong>
+          In some regions, such as the European Economic Area (EEA), United
+          Kingdom (UK), and Canada, you have rights that allow you greater access
+          to and control over your personal information. You may review, change,
+          or terminate your account at any time.
+        </span> <br>
+        <p>In some regions (like the EEA, UK, and Canada), you have certain
+          rights under applicable data protection laws. These may include
+          the right (i) to request access and obtain a copy of your personal
+          information, (ii) to request rectification or erasure; (iii) to
+          restrict the processing of your personal information; and (iv)
+          if applicable, to data portability. In certain circumstances,
+          you may also have the right to object to the processing of your
+          personal information. You can make such a request by contacting
+          us by using the contact details provided in the section "HOW
+          CAN YOU CONTACT US ABOUT THIS NOTICE?" below.</p>
+        <p>We will consider and act upon any request in accordance with
+          applicable data protection laws.</p>
+
+        <p>If you are located in the EEA or UK and you believe we are
+          unlawfully processing your personal information, you also have
+          the right to complain to your local data protection supervisory
+          authority. You can find their contact details
+          here: <a
+            href="https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm"> https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm</a>.
         </p>
-        <h3>网站信标/像素标签</h3>
-        <p>
-          除 Cookie
-          外，我们还会在网站上使用网站信标或像素标签。网站信标通常是一种嵌入到网站或电子邮件中的电子图像，可用于在您查看网页或电子邮件时识别您设备上的
-          Cookie。像素标签使我们可以以您可阅读的格式传送电子邮件，并使我们能够获知电子邮件是否被打开。我们将该类技术用于多种用途，包括分析服务使用情况（与
-          Cookie 配合使用）以及提供更符合您需求的内容及广告。
-        </p>
-        <h2>我们如何共享、转让、公开披露您的个人信息</h2>
-        <h3>共享</h3>
-        <p>我们不会对外共享您的个人信息，但以下情况除外：</p>
-        <p>1、在获得您的明确同意后，我们会向您指定的第三方共享您授权范围内的信息；</p>
-        <p>2、我们可能会根据法律法规规定、诉讼争议解决需要，或按行政、司法机关依法提出的要求，对外共享您的个人信息；</p>
-        <p>
-          3、您的信息可能会在我们的关联公司内共享。我们仅会出于特定、明确而合法的目的在我们的关联公司内共享您的信息，并且只会共享提供服务所必要的信息；
-        </p>
-        <p>
-          4、您的信息可能会共享给我们的业务合作伙伴以保障为您提供的服务顺利完成。但我们仅出于合法、正当、特定、明确的目的共享您的个人信息，并且只会共享提供服务所必要的个人信息。
-        </p>
-        <h3>转让</h3>
-        <p>我们不会将您的个人信息转让给任何公司、组织和个人，但以下情况除外：</p>
-        <p>1、在获得您的明确同意后，我们会向其他方转让您的个人信息；</p>
-        <p>
-          2、在涉及合并、收购或破产清算时，如涉及到个人信息转让，我们会要求新的持有您个人信息的公司、组织继续受本声明的约束，否则我们将要求该公司、组织重新向您征求授权同意。
-        </p>
-        <h3>公开披露</h3>
-        <p>我们会在以下情况下，公开披露您的个人信息：</p>
-        <p>1、获得您的明确同意后；</p>
-        <p>
-          2、基于法律或合理依据的公开披露：在法律、法律程序、诉讼或公共和政府主管部门有要求的情况下，我们可能会公开披露您的信息。
-        </p>
-        <h2>我们如何保存和保护您的个人信息</h2>
-        <p>
-          我们已经采取符合业界标准、合理可行的安全防护措施保护您的信息，防止个人信息遭到未经授权的访问、公开披露、使用、修改、损坏或丢失。我们会采取合理可行的措施，尽力避免收集无关的个人信息。我们只会在达成本政策所述目的所需的期限内保留您的个人信息，除非法律有强制的存留要求。
-        </p>
-        <p>
-          互联网并非绝对安全的环境，使用我们提供的服务时，我们强烈建议您不要使用非我官方平台推荐的通信方式发送您的信息。
-        </p>
-        <p>
-          请注意，您在使用我们服务时自愿共享甚至公开分享的信息，可能会涉及您或他人的个人信息甚至个人敏感信息。请您更加谨慎地考虑，是否使用我们地服务时共享甚至公开分享相关信息。
-        </p>
-        <p>
-          在不幸发生个人信息安全事件后，我们讲按照法律法规的要求向您告知：安全事件的基本情况和可能的影响、我们已采取或将要采取的处置措施、您可以自主防范和降低风险的建议、对您的补救措施等。
-        </p>
-        <h2>您的权利</h2>
-        <p>
-          我们将尽一切可能采取适当的技术手段，保证收集的有关于您的个人信息的准确性，并保证及时进行更新。您也可以按照我们的相关政策及提示，对您的个人信息进行访问、更正及删除。
-        </p>
-        <h2>我们会如何处理未成年人的个人信息</h2>
-        <p>
-          我们的产品与服务主要面向成人，但对于使用我们产品与服务的未成年人，我们很清楚采取额外预防措施保护其隐私和安全的重要性。我们将不满
-          18 周岁（或当地法律规定的年龄）的任何人均视为未成年人。我们不专门向 13 岁以下的儿童营销。
-        </p>
-        <p>
-          对于经监护人同意而收集的未成年人个人信息，我们只会在法律允许、监护人明确同意或者保护未成年人所必要的情况下使用或披露。如果任何时候监护人需要访问、修改或删除与被监护人有关的个人信息，请按照本政策“联系我们”章节中介绍的方式与我们联系。
-        </p>
-        <p>
-          如果我们发现自己在未事先获得可证实的监护人同意的情况下收集了未成年人的个人信息，则会设法尽快删除相关内容。
-        </p>
-        <h2>本隐私政策如何更新</h2>
-        <p>我们保留不时更新或修改本声明的权利。</p>
-        <p>
-          如果该等变更会导致您在本政策项下权利的实质减损，我们将在变更生效前，通过在页面显著位置提示等方式通知您。对于重大变更，我们还会提供更为显著的通知。在该种情况下，若您继续使用我们的服务，即表示同意受经修订的政策约束。本政策所指的重大变更包括但不限于：
-        </p>
-        <p>1、我们的服务模式发生重大变化。如处理个人信息的目的、处理的个人信息类型、个人信息的使用方式等；</p>
-        <p>2、我们在所有权结构、组织架构等方面发生重大变化。如业务调整、破产并购等引起的所有者变更等；</p>
-        <p>3、个人信息共享、转让或公开披露的主要对象发生变化；</p>
-        <p>4、您参与个人信息处理方面的权利及其行使方式发生重大变化；</p>
-        <p>5、我们负责处理个人信息安全的责任部门、联络方式及投诉渠道发生变化时；</p>
-        <p>6、个人信息安全影响评估报告表明存在高风险时。</p>
-        <h2>联系我们</h2>
-        <p>如果您对本隐私政策有任何疑问，可以使用以下信息与我们联系。</p>
-        <p>邮箱：service@superdigiads.com</p>
-        <p>客服微信：Dbgj-Adseasy</p>
-        <p>地址：RM22 2/F FU TAO BUILDING，NO.98 ARGYLE，STREET KOWLOON HONG KONG</p>
+        <p>Withdrawing your consent: If we are relying on your consent to
+          process your personal information, which may be express and/or
+          implied consent depending on the applicable law, you have the
+          right to withdraw your consent at any time. You can withdraw your
+          consent at any time by contacting us by using the contact details
+          provided in the section "HOW CAN YOU CONTACT US ABOUT THIS
+          NOTICE?" below.</p>
+        <p>However, please note that this will not affect the lawfulness of the
+          processing before its withdrawal, nor when applicable law allows, will
+          it affect the processing of your personal information conducted in
+          reliance on lawful processing grounds other than consent.</p>
+
+        <span>
+          <strong style="text-decoration:underline ;">Opting out of marketing and promotional communications:</strong>
+          You can unsubscribe from our marketing and promotional
+          communications at any time by clicking on the unsubscribe link
+          in the emails that we send, replying "STOP" or "UNSUBSCRIBE" to
+          the SMS messages that we send, or by contacting us using the
+          details provided in the section "HOW CAN YOU CONTACT US ABOUT
+          THIS NOTICE?" below. You will then be removed from the marketing
+          lists. However, we may still communicate with you — for example,
+          to send you service-related messages that are necessary for the
+          administration and use of your account, to respond to service
+          requests, or for other non-marketing purposes.
+        </span> <br>
+        <h4>Account Information</h4>
+        <p>If you would at any time like to review or change the information in
+          your account or terminate your account, you can:</p>
+        <ul>
+          <li>Contact us using the contact information provided.</li>
+        </ul>
+        <p>Cookies and similar technologies: Most Web browsers are set to accept
+          cookies by default. If you prefer, you can usually choose to set your
+          browser to remove cookies and to reject cookies. If you choose to
+          remove cookies or reject cookies, this could affect certain features
+          or services of our Services. To opt out of interest-based advertising
+          by advertisers on our Services
+          visit <a href="http://www.aboutads.info/choices/">
+            http://www.aboutads.info/choices/</a>.</p>
+
+        <p>If you have questions or comments about your privacy rights, you may email us at <a
+            href="service@superdigiads.com"> service@superdigiads.com</a>.</p>
+        <h2>11. CONTROLS FOR DO-NOT-TRACK FEATURES</h2>
+        <p>Most web browsers and some mobile operating systems and mobile
+          applications include a Do-Not-Track ("DNT") feature or setting
+          you can activate to signal your privacy preference not to have
+          data about your online browsing activities monitored and
+          collected. At this stage no uniform technology standard
+          for recognizing and implementing DNT signals has been 
+          finalized. As such, we do not currently respond to DNT
+          browser signals or any other mechanism that automatically
+          communicates your choice not to be tracked online. If
+          a standard for online tracking is adopted that we must
+          follow in the future, we will inform you about that practice
+          in a revised version of this privacy notice.</p>
+        <h2>12. DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</h2>
+        <span>
+          <strong>In Short:</strong>
+          Yes, if you are a resident of California, you are granted specific
+          rights regarding access to your personal information.
+        </span> <br>
+        <p>California Civil Code Section 1798.83, also known as the "Shine
+          The Light" law, permits our users who are California residents
+          to request and obtain from us, once a year and free of charge,
+          information about categories of personal information (if any)
+          we disclosed to third parties for direct marketing purposes
+          and the names and addresses of all third parties with which
+          we shared personal information in the immediately preceding
+          calendar year. If you are a California resident and would
+          like to make such a request, please submit your request
+          in writing to us using the contact information provided
+          below.</p>
+        <p>If you are under 18 years of age, reside in California,
+          and have a registered account with Services, you have the
+          right to request removal of unwanted data that you publicly post
+          on the Services. To request removal of such data, please contact
+          us using the contact information provided below and include
+          the email address associated with your account and a statement
+          that you reside in California. We will make sure the data
+          is not publicly displayed on the Services, but please be aware
+          that the data may not be completely or comprehensively removed
+          from all our systems (e.g., backups, etc.).</p>
+        <h4>CCPA Privacy Notice</h4>
+        <p>The California Code of Regulations defines a "resident" as:</p>
+        <p>(1) every individual who is in the State of California for
+          other than a temporary or transitory purpose and</p>
+        <p>(2) every individual who is domiciled in the State of
+          California who is outside the State of California for a
+          temporary or transitory purpose</p>
+        <p>All other individuals are defined as "non-residents."</p>
+        <p>If this definition of "resident" applies to you, we must
+          adhere to certain rights and obligations regarding your
+          personal information.</p>
+        <h4>What categories of personal information do we collect?</h4>
+        <p>We have collected the following categories of personal information in the past twelve
+          (12) months:</p>
+        <table>
+          <tr>
+            <th>Category</th>
+            <th>Examples</th>
+            <th>Collected</th>
+          </tr>
+          <!-- 第一行 -->
+          <tr>
+            <td>A. Identifiers</td>
+            <td>Contact details, such as real name, alias, postal address,
+              telephone or mobile contact number, unique personal identifier,
+              online identifier, Internet Protocol address, email address,
+              and account name</td>
+            <td>NO</td>
+          </tr>
+          <!-- 第二行 -->
+          <tr>
+            <td>B. Personal information categories listed in the California
+              Customer Records statute</td>
+            <td>Name, contact information, education, employment, employment
+              history, and financial information</td>
+            <td>YES</td>
+          </tr>
+          <!-- 第三行 -->
+          <tr>
+            <td>C. Protected classification characteristics under California or
+              federal law</td>
+            <td>Gender and date of birth</td>
+            <td>NO</td>
+          </tr>
+          <!-- 第四行 -->
+          <tr>
+            <td>D. Commercial information</td>
+            <td>Transaction information, purchase history, financial details,
+              and payment information</td>
+            <td>NO</td>
+          </tr>
+          <!-- 第五行 -->
+          <tr>
+            <td>E. Biometric information </td>
+            <td>Fingerprints and voiceprints</td>
+            <td>NO</td>
+          </tr>
+          <!-- 第六行 -->
+          <tr>
+            <td>F. Internet or other similar network activity</td>
+            <td>Browsing history, search history, online behavior, interest
+              data, and interactions with our and other websites,
+              applications, systems, and advertisements</td>
+            <td>YES</td>
+          </tr>
+          <!-- 第七行 -->
+          <tr>
+            <td>G. Geolocation data</td>
+            <td>Device location</td>
+            <td>NO</td>
+          </tr>
+          <!-- 第八行 -->
+          <tr>
+            <td>H. Audio, electronic, visual, thermal, olfactory, or similar information</td>
+            <td>Images and audio, video or call recordings created in
+              connection with our business activities</td>
+            <td>NO</td>
+          </tr>
+          <!-- 第九行 -->
+          <tr>
+            <td>I. Professional or employment-related information</td>
+            <td>Business contact details in order to provide you our
+              services at a business level or job title, work history,
+              and professional qualifications if you apply for a job
+              with us</td>
+            <td>NO</td>
+          </tr>
+          <!-- 第十行 -->
+          <tr>
+            <td>J. Education Information</td>
+            <td>Student records and directory information</td>
+            <td>NO</td>
+          </tr>
+          <!-- 第十一行 -->
+          <tr>
+            <td>K. Inferences drawn from other personal information</td>
+            <td>Inferences drawn from any of the collected personal
+              information listed above to create a profile or summary
+              about, for example, an individual’s preferences and
+              characteristics</td>
+            <td>NO</td>
+          </tr>
+        </table>
+        <p>We may also collect other personal information outside of these
+          categories instances where you interact with us in person,
+          online, or by phone or mail in the context of:</p>
+        <ul>
+          <li>Receiving help through our customer support channels;</li>
+          <li>Participation in customer surveys or contests; and</li>
+          <li>Facilitation in the delivery of our Services and to respond
+            to your inquiries.</li>
+        </ul>
+        <h4>How do we use and share your personal information?</h4>
+        <p>More information about our data collection and sharing practices
+          can be found in this privacy notice.</p>
+
+        <p>You may contact us by email at <a href="service@superdigiads.com"> service@superdigiads.com</a> , or by
+          referring
+          to the contact details at the bottom of this document.</p>
+        <p>If you are using an authorized agent to exercise your right to opt out
+          we may deny a request if the authorized agent does not submit proof that they
+          have been validly authorized to act on your behalf.</p>
+        <h4>Will your information be shared with anyone else?</h4>
+        <p>We may disclose your personal information with our service providers
+          pursuant to a written contract between us and each service provider.
+          Each service provider is a for-profit entity that processes the
+          information on our behalf.</p>
+        <p>We may use your personal information for our own business purposes,
+          such as for undertaking internal research for technological development
+          and demonstration. This is not considered to be "selling" of your
+          personal information.</p>
+        <p>ADSEASY PTE.LTD. has not disclosed or sold any personal information
+          to third parties for a business or commercial purpose in the preceding
+          twelve (12) months. ADSEASY PTE.LTD. will not sell personal information
+          in the future belonging to website visitors, users, and other consumers
+          .</p>
+        <h4></h4>
+        <p style="text-decoration:underline;">Right to request deletion of the data — Request to delete</p>
+        <p>You can ask for the deletion of your personal information. If you ask us to
+          delete your personal information, we will respect your request and delete your
+          personal information, subject to certain exceptions provided by law, such as
+          (but not limited to) the exercise by another consumer of his or her right to
+          free speech, our compliance requirements resulting from a legal obligation,
+          or any processing that may be required to protect against illegal activities.</p>
+        <p style="text-decoration:underline;">Right to be informed — Request to know</p>
+        <p>Depending on the circumstances, you have a right to know:</p>
+        <ul>
+          <li>whether we collect and use your personal information;</li>
+          <li>the categories of personal information that we collect;</li>
+          <li>the purposes for which the collected personal information is used;</li>
+          <li>whether we sell your personal information to third parties;</li>
+          <li>the categories of personal information that we sold or disclosed for a
+            business purpose;</li>
+          <li>the categories of third parties to whom the personal information was sold
+            or disclosed for a business purpose; and</li>
+          <li>the business or commercial purpose for collecting or selling personal
+            information.</li>
+        </ul>
+        <p>In accordance with applicable law, we are not obligated to provide or
+          delete consumer information that is de-identified in response to a consumer
+          request or to re-identify individual data to verify a consumer request.</p>
+        <p style="text-decoration:underline;">Right to Non-Discrimination for the Exercise of a Consumer’s Privacy
+          Rights</p>
+        <p>We will not discriminate against you if you exercise your privacy rights.</p>
+        <p style="text-decoration:underline;">Verification process</p>
+        <p>Upon receiving your request, we will need to verify your identity to
+          determine you are the same person about whom we have the information in our
+          system. These verification efforts require us to ask you to provide information
+          so that we can match it with information you have previously provided us.
+          For instance, depending on the type of request you submit, we may ask you
+          to provide certain information so that we can match the information you
+          provide with the information we already have on file, or we may contact
+          you through a communication method (e.g., phone or email) that you have
+          previously provided to us. We may also use other verification methods as
+          the circumstances dictate.</p>
+        <p>We will only use personal information provided in your request to verify
+          your identity or authority to make the request. To the extent possible,
+          we will avoid requesting additional information from you for the purposes
+          of verification. However, if we cannot verify your identity from the
+          information already maintained by us, we may request that you provide
+          additional information for the purposes of verifying your identity and
+          for security or fraud-prevention purposes. We will delete such additionally
+          provided information as soon as we finish verifying you.</p>
+        <p style="text-decoration:underline;">Other privacy rights</p>
+        <ul>
+          <li>You may object to the processing of your personal information.</li>
+          <li>You may request correction of your personal data if it is incorrect
+            or no longer relevant, or ask to restrict the processing of the
+            information.</li>
+          <li>You can designate an authorized agent to make a request under the
+            CCPA on your behalf. We may deny a request from an authorized agent
+            that does not submit proof that they have been validly authorized to
+            act on your behalf in accordance with the CCPA.</li>
+          <li>You may request to opt out from future selling of your personal
+            information to third parties. Upon receiving an opt-out request, we
+            will act upon the request as soon as feasibly possible, but no later
+            than fifteen (15) days from the date of the request submission.</li>
+        </ul>
+        <p>To exercise these rights, you can contact us by email
+          at <a href="service@superdigiads.com">service@superdigiads.com</a> , or by referring to the contact details
+          at the bottom of this document. If you have a complaint about how we
+          handle your data, we would like to hear from you.</p>
+        <h2>13. DO WE MAKE UPDATES TO THIS NOTICE?</h2>
+        <span>Yes, we will update this notice as necessary to stay compliant with relevant
+          <strong>In Short: </strong>
+          laws.</span> <br>
+        <p>We may update this privacy notice from time to time. The updated version will
+          be indicated by an updated "Revised" date and the updated version will be
+          effective as soon as it is accessible. If we make material changes to this
+          privacy notice, we may notify you either by prominently posting a notice
+          of such changes or by directly sending you a notification. We encourage
+          you to review this privacy notice frequently to be informed of how we are
+          protecting your information.</p>
+        <h2>14. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</h2>
+        <p>If you have questions or comments about this notice,
+          you may email us at <a href="service@superdigiads.com">service@superdigiads.com</a>  or by post to:</p>
+        <p>ADSEASY PTE.LTD.</p>
+        <p>112 ROBINSON ROAD</p>
+        <p>#03-01</p>
+        <p>ROBINSON 112</p>
+        <p>SINGAPORE(068902)</p>
+        <h4>15. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</h4>
+        <p>Based on the applicable laws of your country, you may have the right to request
+          access to the personal information we collect from you, change that information,
+          or delete it. To request to review, update, or delete your personal information,
+          please contact: <a href="service@superdigiads.com">service@superdigiads.com</a> .</p>
       </template>
       <template v-else-if="type === 'service'">
-        <h2>定义和说明</h2>
-        <p>
-          《东坤 Digi Ads 服务协议》（以下简称“本协议”）是用户（以下简称“用户”或您）与东坤 Digi Ads 之间的协议，东坤
-          Digi Ads
-          将按照本协议约定之内容为您提供服务。请您务必审慎阅读、充分理解各条款内容，若您不同意本协议中所述任何条款或其后对协议条款的修改，请您不要使用东坤
-          Digi Ads
-          及相关服务。您的使用行为将视作对本协议全部条款的完全接受。如果您是未成年人，请在法定监护人的陪同下阅读和判断是否同意本协议，特别注意未成年人使用条款。未成年人行使和履行本协议项下的权利和义务视为已获得监护人的认可。
-        </p>
-        <p>东坤 Digi Ads 向您提供包括但不限于如下服务：</p>
+        <h2>TERMS AND CONDITIONS</h2>
+        <h3>Last updated May 31, 2022</h3>
+        <h4>TABLE OF CONTENTS</h4>
+        <p>1. AGREEMENT TO TERMS</p>
+        <p>2. INTELLECTUAL PROPERTY RIGHTS</p>
+        <p>3. USER REPRESENTATIONS</p>
+        <p>4. USER REGISTRATION</p>
+        <p>5. FEES AND PAYMENT</p>
+        <p>6. FREE TRIAL</p>
+        <p>7. CANCELLATION</p>
+        <p>8. PROHIBITED ACTIVITIES</p>
+        <p>9. USER GENERATED CONTRIBUTIONS</p>
+        <p>10. CONTRIBUTION LICENSE</p>
+        <p>11. SUBMISSIONS</p>
+        <p>12. THIRD-PARTY WEBSITES AND CONTENT</p>
+        <p>13. ADVERTISERS</p>
+        <p>14. U.S. GOVERNMENT RIGHTS</p>
+        <p>15. SITE MANAGEMENT</p>
+        <p>16. PRIVACY POLICY</p>
+        <p>17. TERM AND TERMINATION</p>
+        <p>18. MODIFICATIONS AND INTERRUPTIONS</p>
+        <p>19. GOVERNING LAW</p>
+        <p>20. DISPUTE RESOLUTION</p>
+        <p>21. CORRECTIONS</p>
+        <p>22. DISCLAIMER</p>
+        <p>23. LIMITATIONS OF LIABILITY</p>
+        <p>24. INDEMNIFICATION</p>
+        <p>25. USER DATA</p>
+        <p>26. ELECTRONIC COMMUNICATIONS, TRANSACTIONS, AND SIGNATURES</p>
+        <p>27. CALIFORNIA USERS AND RESIDENTS</p>
+        <p>28. MISCELLANEOUS</p>
+        <p>29. CONTACT US</p>
+
+        <h2>1. AGREEMENT TO TERMS</h2>
+        <p>These Terms of Use constitute a legally binding agreement made between
+          you, whether personally or on behalf of an entity (“you”) and ADSEASY
+          PTE.LTD. ("<strong>Company</strong>", “ <strong>we</strong> ”, “ <strong>us</strong> ”,
+          or “ <strong>our</strong> ”), concerning your access to
+          and use of the <a href="http://www.superdigiads.com/">http://www.superdigiads.com/</a>  website as well as any
+          other
+          media form, media channel, mobile website or mobile application related,
+          linked, or otherwise connected thereto (collectively, the “Site”). We are
+          registered in Hong Kong and have our registered office at ADSEASY PTE.LTD.
+           Our UEN number is 202224438C. You agree that by accessing the Site, you
+          have read, understood, and agree to be bound by all of these Terms of Use
+          , including the User Agreement posted on the Site, which are incorporated
+          into these Terms of Use. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS OF
+          USE, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SITE AND YOU MUST 
+          DISCONTINUE USE IMMEDIATELY.</p>
+
+        <p>Supplemental terms and conditions or documents that may be posted on
+          the Site from time to time are hereby expressly incorporated herein by
+          reference. We reserve the right, in our sole discretion, to make changes
+          or modifications to these Terms of Use from time to time. We will
+          alert you about any changes by updating the “Last updated” date of
+          these Terms of Use, and you waive any right to receive specific
+          notice of each such change. Please ensure that you check the applicable
+          Terms every time you use our Site so that you understand which Terms
+          apply. You will be subject to, and will be deemed to have been made
+          aware of and to have accepted, the changes in any revised Terms of
+          Use by your continued use of the Site after the date such revised
+          Terms of Use are posted.</p>
+        <p>The information provided on the Site is not intended for distribution
+          to or use by any person or entity in any jurisdiction or country where
+          such distribution or use would be contrary to law or regulation or
+          which would subject us to any registration requirement within such
+          jurisdiction or country. Accordingly, those persons who choose to
+          access the Site from other locations do so on their own initiative
+          and are solely responsible for compliance with local laws, if and to
+          the extent local laws are applicable.</p>
+        <p>The Site is not tailored to comply with industry-specific regulations
+          (Health Insurance Portability and Accountability Act (HIPAA), Federal
+          Information Security Management Act (FISMA), etc.), so if your
+          interactions would be subjected to such laws, you may not use this
+          Site. You may not use the Site in a way that would violate the
+          Gramm-Leach-Bliley Act (GLBA).</p>
+        <p>The Site is not tailored to comply with industry-specific regulations
+          (Health Insurance Portability and Accountability Act (HIPAA), Federal
+          Information Security Management Act (FISMA), etc.), so if your
+          interactions would be subjected to such laws, you may not use this
+          Site. You may not use the Site in a way that would violate the
+          Gramm-Leach-Bliley Act (GLBA).</p>
+        <h2>2. INTELLECTUAL PROPERTY RIGHTS</h2>
+        <p>Unless otherwise indicated, the Site is our proprietary property and all source code, databases,
+          functionality, software, website designs, audio, video, text, photographs, and graphics on the Site
+          (collectively, the “Content”) and the trademarks, service marks, and logos contained therein (the “Marks”) are
+          owned or controlled by us or licensed to us, and are protected by copyright and trademark laws and various
+          other intellectual property rights and unfair competition laws of the United States, international copyright
+          laws, and international conventions. The Content and the Marks are provided on the Site “AS IS” for your
+          information and personal use only. Except as expressly provided in these Terms of Use, no part of the Site and
+          no Content or Marks may be copied, reproduced, aggregated, republished, uploaded, posted, publicly displayed,
+          encoded, translated, transmitted, distributed, sold, licensed, or otherwise exploited for any commercial
+          purpose whatsoever, without our express prior written permission.</p>
+        <p>Provided that you are eligible to use the Site, you are granted a limited license to access and use the Site
+          and to download or print a copy of any portion of the Content to which you have properly gained access solely
+          for your personal, non-commercial use. We reserve all rights not expressly granted to you in and to the Site,
+          the Content and the Marks.</p>
+        <h2>3. USER REPRESENTATIONS</h2>
+        <p>By using the Site, you represent and warrant that: (1) all registration information you submit will be true,
+          accurate, current, and complete; (2) you will maintain the accuracy of such information and promptly update
+          such registration information as necessary; (3) you have the legal capacity and you agree to comply with these
+          Terms of Use; (4) you are not a minor in the jurisdiction in which you reside; (5) you will not access the
+          Site through automated or non-human means, whether through a bot, script or otherwise; (6) you will not use
+          the Site for any illegal or unauthorized purpose; and (7) your use of the Site will not violate any applicable
+          law or regulation.</p>
+        <p>If you provide any information that is untrue, inaccurate, not current, or incomplete, we have the right to
+          suspend or terminate your account and refuse any and all current or future use of the Site (or any portion
+          thereof).</p>
+        <h2>4. USER REGISTRATION</h2>
+        <p>You may be required to register with the Site. You agree to keep your password confidential and will be
+          responsible for all use of your account and password. We reserve the right to remove, reclaim, or change a
+          username you select if we determine, in our sole discretion, that such username is inappropriate, obscene, or
+          otherwise objectionable.</p>
+        <h2>5. FEES AND PAYMENT</h2>
+        <p>We accept the following forms of payment:</p>
+        <p>-  Visa</p>
+        <p>-  PayPal</p>
+        <p>-  Mastercard</p>
+        <p>-  Union Pay</p>
+        <p>-  WeChat Pay</p>
+        <p>-  Ali Pay</p>
+        <p>You may be required to purchase or pay a fee to access some of our services. You agree to provide current,
+          complete, and accurate purchase and account information for all purchases made via the Site. You further agree
+          to promptly update account and payment information, including email address, payment method, and payment card
+          expiration date, so that we can complete your transactions and contact you as needed. We bill you through an
+          online billing account for purchases made via the Site. Sales tax will be added to the price of purchases as
+          deemed required by us. We may change prices at any time. All payments shall be in U.S. dollars.</p>
+        <p>You agree to pay all charges or fees at the prices then in effect for your purchases, and you authorize us to
+          charge your chosen payment provider for any such amounts upon making your purchase. If your purchase is
+          subject to recurring charges, then you consent to our charging your payment method on a recurring basis
+          without requiring your prior approval for each recurring charge, until you notify us of your cancellation.</p>
+        <p>We reserve the right to correct any errors or mistakes in pricing, even if we have already requested or
+          received payment. We also reserve the right to refuse any order placed through the Site.</p>
+
+        <h2>6. FREE TRIAL</h2>
+        <p>We offer a 7-day free trial to new users who register with the Site. The account will not be charged and the
+          subscription will be suspended until upgraded to a paid version at the end of the free trial.</p>
+        <h2>7. CANCELLATION</h2>
+        <p>All purchases are non-refundable. You can cancel your subscription at any time by logging into your account.
+          Your cancellation will take effect at the end of the current paid term.</p>
+        <p>If you are unsatisfied with our services, please email us at service@superdigiads.com.</p>
+        <h2>8. PROHIBITED ACTIVITIES</h2>
+        <p>You may not access or use the Site for any purpose other than that for which we make the Site available. The
+          Site may not be used in connection with any commercial endeavors except those that are specifically endorsed
+          or approved by us.</p>
+        <p>As a user of the Site, you agree not to:</p>
         <ul>
-          <li>东坤 Digi Ads 平台：东坤 Digi Ads 网站 www.superdigiads.com 及客户端；</li>
-          <li>东坤 Digi Ads 直接拥有或运营的服务器、网络存储空间；</li>
-          <li>东坤 Digi Ads 提供给您的各类增值服务；</li>
-          <li>东坤 Digi Ads 提供给您的其他技术和/或服务。</li>
-        </ul>
-        <h2>账户的注册、使用及注销</h2>
-        <h3>注册</h3>
-        <p>
-          1. 东坤 Digi Ads 及相关服务为您提供了注册通道，您有权选择合法的字
-          符组合作为自己的账号，并自行设置符合安全要求的密码。用户设置的账号、密码是用户用以登录并使用东坤 Digi Ads
-          及相关服务的凭证。若您为未成年人，东坤 Digi Ads 将依法根据国家相关法律法规及监管要求限制您的使用行为。
-        </p>
-        <p>
-          2. 您理解并承诺，您所设置的账号不得违反国家法律及东坤 Digi Ads 的
-          相关规则，不得实施任何侵害国家利益、损害其他公民合法权益，有害社
-          会道德风尚的行为，您的账号名称、头像和简介等注册信息及其他个人信
-          息中不得出现违法和不良信息，未经他人许可不得用他人名义（包括但不
-          限于冒用他人姓名、名称、字号、头像等足以让人引起混淆的方式）开设 账号，不得恶意注册东坤 Digi Ads
-          账号（包括但不限于频繁注册、批量 注册账号等行为）。东坤 Digi Ads 有权对您提交的信息进行审核。您在账
-          户注册使用过程中需遵守法律法规、社会主义制度、国家利益、公民合法
-          权益、社会公共秩序、道德风尚及信息真实性等“七条底线”要求。
-        </p>
-        <p>
-          3. 在注册、使用和管理帐号时，您应保证注册帐号时填写的身份信息的
-          真实性，请您在注册、管理帐号时使用真实、准确、合法、有效的相关身
-          份证明材料及必要信息（包括您的姓名及电子邮件地址、联系电话、联系
-          地址等），若国家法律法规有特殊规定，您需要填写真实的身份信息，请
-          您按照相关法律规定完成实名认证，以便我们在必要时与您联系或为您提
-          供更好的服务，并注意及时更新上述相关信息。若您提交的材料或提供的
-          信息不准确、不真实、不合法或者我们有理由怀疑为错误、不实或不合法 的资料，则您可能无法使用东坤 Digi Ads
-          或服务，或在使用过程中部分 功能受到限制。
-        </p>
-        <h3>使用</h3>
-        <p>
-          1. 您的账号仅限于您本人使用，未经东坤 Digi Ads 书面同意，禁止以任
-          何形式赠与、借用、出租、转让、售卖或以其他方式许可他人使用该账号。 如果东坤 Digi Ads
-          发现或者有合理理由认为使用者并非账号初始注册人， 为保障账号安全，东坤 Digi Ads
-          有权立即暂停或终止向该注册账号提供 服务，或注销该账号。
-        </p>
-        <p>
-          2. 您有责任维护个人账号、密码的安全性与保密性，并对您以注册账号
-          名义所从事的活动承担全部法律责任，包括但不限于您在东坤 Digi Ads
-          及相关服务上进行的任何数据修改、言论发表、款项支付等操作行为可能
-          引起的一切法律责任。您应高度重视对账号与密码的保密，在任何情况下
-          不向他人透露账号及密码。若发现他人未经许可使用您的账号或发生其他 任何安全漏洞问题时，您应当立即通知东坤 Digi
-          Ads。
-        </p>
-        <p>
-          3. 在丢失账号或遗忘密码时，您可遵照东坤 Digi Ads 的申诉途径及时申 诉请求找回账号或密码。您理解并认可，东坤
-          Digi Ads 的密码找回机制 仅需要识别申诉单上所填资料与系统记录资料具有一致性，而无法识别申
-          诉人是否系真正账号有权使用者。东坤 Digi Ads 特别提醒您应妥善保管
-          您的账号和密码。当您使用完毕后，应安全退出。如因您保管不当等自身
-          原因或其他不可抗因素导致遭受盗号或密码丢失，您将自行承担相应责任。
-        </p>
-        <p>
-          4. 因其他人恶意攻击或您自身原因或其他不可抗因素而导致帐号被盗、 丢失，均由您本人承担责任，东坤 Digi Ads
-          不承担任何责任。
-        </p>
-        <p>
-          5. 东坤 Digi Ads 依照本协议、相关规则限制您使用帐号全部或部分功能
-          的，可能会给您造成一定的损失，您理解该损失由您自行承担，东坤 Digi Ads 不承担责任。
-        </p>
-        <p>
-          6. 除自行注册东坤 Digi Ads 账号外，您也可授权使用您合法拥有的包括 但不限于东坤 Digi Ads
-          和/或其关联公司其他软件用户账号，以及实名注 册的第三方软件用户账号登录使用东坤 Digi Ads 及相关服务，但第三方
-          软件或平台对此有限制或禁止的除外。当您以前述已有账号登录使用的，
-          应保证相应账号已进行实名注册登记，并同样适用本协议中的相关条款。
-        </p>
-        <p>
-          7. 您理解并同意，除您登录、使用东坤 Digi Ads 及相关服务外，您还可 以用东坤 Digi Ads 账号登录使用东坤 Digi Ads
-          及其关联公司或合作的 第三方提供的其他软件、服务。您以东坤 Digi Ads 账号登录并使用前述
-          服务时，将受到前述服务的实际提供方的《用户协议》及其他协议条款约 束。
-        </p>
-        <p>
-          8. 身份要素是我们识别您身份的依据，请您务必妥善保管。使用身份要
-          素进行的操作、发出的指令视为您本人做出。因您的原因造成的账户、密
-          码等信息被冒用、盗用或非法使用，由此引起的风险和损失需要由您自行 承担。
-          您同意，基于不同的终端以及您的使用习惯，我们可能采取不同 的验证措施识别您的身份。
-        </p>
-        <p>
-          9. 您理解并同意，为了充分使用账号资源，如您在注册后未及时进行初
-          次登录使用或连续超过一年未登录账号使用等情形，东坤 Digi Ads 有权 收回您的账号昵称。
-        </p>
-        <h3>注销</h3>
-        <p>
-          1. 您有权向东坤 Digi Ads 提出账号注销申请。注销东坤 Digi Ads 账号 后，您将无法再以此账号登录和使用东坤 Digi
-          Ads 及相关服务，东坤 Digi Ads 也将同时终止在该账号下为您提供我们各项产品与服务。且东坤 Digi Ads
-          账号一旦注销完成，将无法恢复。请您在注销前慎重考虑。
-        </p>
-        <p>
-          2. 如您确定需要注销东坤 Digi Ads 账号，您已充分知晓并确认，账号注
-          销后您将不再拥有该账号相关的权益，包括但不限于：
-        </p>
-        <ul>
-          <li>账号注销后，您将无法再以该账号登录、使用东坤 Digi Ads 及相关服 务；</li>
-          <li>
-            账号注销后，您曾通过该账号登录、使用东坤 Digi Ads 及相关服务的
-            所有内容、信息、数据、记录将会被删除或匿名化处理，您也无法再
-            搜索、访问、获取、使用和找回，包括但不限于：账号信息（头像、 昵称、签名等）、绑定信息；
+          <li>Systematically retrieve data or other content from the Site to create or compile, directly or
+            indirectly, a collection, compilation, database, or directory without written permission from us.</li>
+          <li>Trick, defraud, or mislead us and other users, especially in any attempt to learn sensitive account
+            information such as user passwords.</li>
+          <li>Circumvent, disable, or otherwise interfere with security-related features of the Site, including
+            features that prevent or restrict the use or copying of any Content or enforce limitations on the use of the
+            Site and/or the Content contained therein.</li>
+          <li>Disparage, tarnish, or otherwise harm, in our opinion, us and/or the Site.</li>
+          <li>Use any information obtained from the Site in order to harass, abuse, or harm another person.</li>
+          <li>Make improper use of our support services or submit false reports of abuse or misconduct.</li>
+          <li>Use the Site in a manner inconsistent with any applicable laws or regulations.</li>
+          <li>Engage in unauthorized framing of or linking to the Site.</li>
+          <li>Upload or transmit (or attempt to upload or to transmit) viruses, Trojan
+            horses, or other material, including excessive use of capital letters and
+            spamming (continuous posting of repetitive text), that interferes with any
+            party’s uninterrupted use and enjoyment of the Site or modifies, impairs,
+            disrupts, alters, or interferes with the use, features, functions, operation,
+            or maintenance of the Site.</li>
+          <li>Engage in any automated use of the system, such as using scripts to send comments or messages, or using
+            any data mining, robots, or similar data gathering and extraction tools.</li>
+          <li>Delete the copyright or other proprietary rights notice from any Content.</li>
+          <li>Attempt to impersonate another user or person or use the username of another user.</li>
+          <li>Upload or transmit (or attempt to upload or to transmit) any material that acts as a passive or active
+            information collection or transmission mechanism, including without limitation, clear graphics interchange
+            formats (“gifs”), 1×1 pixels, web bugs, cookies, or other similar devices (sometimes referred to as
+            “spyware” or “passive collection mechanisms” or “pcms”).</li>
+          <li>Interfere with, disrupt, or create an undue burden on the Site or the networks or services connected to
+            the Site.</li>
+          <li>Harass, annoy, intimidate, or threaten any of our employees or agents engaged in providing any portion
+            of the Site to you.</li>
+          <li>Attempt to bypass any measures of the Site designed to prevent or restrict access to the Site, or any
+            portion of the Site.</li>
+          <li>Copy or adapt the Site’s software, including but not limited to Flash, PHP, HTML, JavaScript, or other
+            code.</li>
+          <li>Except as permitted by applicable law, decipher, decompile, disassemble, or reverse engineer any of the
+            software comprising or in any way making up a part of the Site.</li>
+          <li>Except as may be the result of standard search engine or Internet browser usage, use, launch, develop,
+            or distribute any automated system, including without limitation, any spider, robot, cheat utility, scraper,
+            or offline reader that accesses the Site, or using or launching any unauthorized script or other software.
           </li>
-          <li>账号注销后，该账号的交易记录将被清空且无法恢复；</li>
-          <li>
-            您同意通过账号注销的方式放弃该账户在东坤 Digi Ads 及相关服务 中已产生但未消耗完毕的权益及未来的预期权益；
-          </li>
-          <li>账号注销后，东坤 Digi Ads 有权不再向用户提供任何与账号有关的服 务。</li>
+          <li>Use a buying agent or purchasing agent to make purchases on the Site.</li>
+          <li>Make any unauthorized use of the Site, including collecting usernames and/or email addresses of users by
+            electronic or other means for the purpose of sending unsolicited email, or creating user accounts by
+            automated means or under false pretenses.</li>
+          <li>Use the Site as part of any effort to compete with us or otherwise use the Site and/or the Content for
+            any revenue-generating endeavor or commercial enterprise.</li>
+          <li>Sell or otherwise transfer your profile.</li>
+          <li>Use the Site to advertise or offer to sell goods and services.</li>
         </ul>
-        <p>
-          3. 在您向我们申请注销东坤 Digi Ads 账号之前，为了保护您的账号安全
-          和财产权益，您需先行检查与确保您申请注销的账号已经同时满足以下条 件，包括但不限于：
-        </p>
+        <h2>9. USER GENERATED CONTRIBUTIONS</h2>
+        <p>The Site does not offer users to submit or post content. We may provide you with the opportunity to create,
+          submit, post, display, transmit, perform, publish, distribute, or broadcast content and materials to us or on
+          the Site, including but not limited to text, writings, video, audio, photographs, graphics, comments,
+          suggestions, or personal information or other material (collectively, "Contributions"). Contributions may be
+          viewable by other users of the Site and through third-party websites. As such, any Contributions you transmit
+          may be treated in accordance with the Site Privacy Policy. When you create or make available any
+          Contributions, you thereby represent and warrant that:</p>
         <ul>
-          <li>账号系用户通过官方渠道注册，符合本协议及相关规定的账号；且为 您本人的账号；</li>
-          <li>按照规定的注销流程进行注销操作；</li>
-          <li>
-            账号处于安全状态，包括：未处于申请找回密码、修改手机号的状态
-            中；无未处理完毕的投诉、举报；其他不安全/异常状态；
-          </li>
-          <li>账号内无未处理完毕的交易；</li>
-          <li>其他应满足的条件。</li>
+          <li>The creation, distribution, transmission, public display, or performance, and the accessing,
+            downloading, or copying of your Contributions do not and will not infringe the proprietary rights, including
+            but not limited to the copyright, patent, trademark, trade secret, or moral rights of any third party.</li>
+          <li>You are the creator and owner of or have the necessary licenses, rights, consents, releases, and
+            permissions to use and to authorize us, the Site, and other users of the Site to use your Contributions in
+            any manner contemplated by the Site and these Terms of Use.</li>
+          <li>You have the written consent, release, and/or permission of each and every identifiable individual
+            person in your Contributions to use the name or likeness of each and every such identifiable individual
+            person to enable inclusion and use of your Contributions in any manner contemplated by the Site and these
+            Terms of Use.</li>
+          <li>Your Contributions are not false, inaccurate, or misleading.</li>
+          <li>Your Contributions are not unsolicited or unauthorized advertising, promotional materials, pyramid
+            schemes, chain letters, spam, mass mailings, or other forms of solicitation.</li>
+          <li>Your Contributions are not obscene, lewd, lascivious, filthy, violent, harassing, libelous, slanderous,
+            or otherwise objectionable (as determined by us).</li>
+          <li>Your Contributions do not ridicule, mock, disparage, intimidate, or abuse anyone.</li>
+          <li>Your Contributions are not used to harass or threaten (in the legal sense of those terms) any other
+            person and to promote violence against a specific person or class of people.</li>
+          <li>Your Contributions do not violate any applicable law, regulation, or rule.</li>
+          <li>Your Contributions do not violate the privacy or publicity rights of any third party.</li>
+          <li>Your Contributions do not violate any applicable law concerning child pornography, or otherwise intended
+            to protect the health or well-being of minors.</li>
+          <li>Your Contributions do not include any offensive comments that are connected to race, national origin,
+            gender, sexual preference, or physical handicap.</li>
+          <li>Your Contributions do not otherwise violate, or link to material that violates, any provision of these
+            Terms of Use, or any applicable law or regulation.</li>
         </ul>
-        <p>
-          4. 东坤 Digi Ads 账号一旦注销，您与我们曾签属过的相关用户协议、其
-          他权利义务性文件等相应终止（但已约定继续生效的或法律另有规定的除
-          外）。同时，您悉知并同意：即使您的账号被注销了，也并不能减轻或免
-          除您在协议期间内应根据相关法律法规、相关协议、规则等（可能）需要 承担的相关责任。
-        </p>
-        <h2>知识产权</h2>
-        <p>
-          1. 东坤 Digi Ads 及相关服务上的内容，包括但不限于著作、图片、档案、
-          资讯、资料、网站架构、网站画面的安排、网页设计，均由东坤 Digi Ads
-          或关联公司依法拥有知识产权，包括但不限于商标权，专利权、著作权、 商业秘密等。
-        </p>
-        <p>
-          2. 非经东坤 Digi Ads 或关联公司书面同意，请勿擅自适用、修改、反向
-          编译、复制、公开传播、改变、散布、发行或公开发表东坤 Digi Ads 及 服务中的相关内容。
-        </p>
-        <p>
-          3. 除非您与东坤 Digi Ads 另有书面协议，否则，本服务条款中的任何规 定均未授予您使用东坤 Digi Ads
-          的任何商品名、商标、服务标记、徽标、 域名及其他显著品牌特征的权利。
-        </p>
-        <p>4. 尊重知识产权是您应尽的义务，如有违反，您需要承担损害赔偿责任。</p>
-        <h2>隐私保护</h2>
-        <p>
-          东坤 Digi Ads 充分尊重用户个人信息的保护，东坤 Digi Ads 的隐私政 策介绍了您在使用东坤 Digi Ads
-          及相关服务时，东坤 Digi Ads 如何处 理您的个人信息。您使用东坤 Digi Ads 及相关服务，即表示您同意东坤 Digi Ads
-          可以按照隐私政策进行处理相应信息。
-        </p>
-        <h2>用户行为规范</h2>
-        <p>1. 在使用东坤 Digi Ads 及相关服务过程中，应遵守以下法律法规：</p>
-        <ul>
-          <li>《中华人民共和国保守国家秘密法》</li>
-          <li>《中华人民共和国著作权法》</li>
-          <li>《中华人民共和国计算机信息系统安全保护条例》</li>
-          <li>《计算机软件保护条例》</li>
-          <li>《互联网电子公告服务管理规定》</li>
-          <li>《信息网络传播权保护条例》</li>
-          <li>《中华人民共和国网络安全法》</li>
-          <li>其他有关计算机及互联网规定的法律、法规。</li>
-        </ul>
-        <p>
-          2. 在任何情况下，东坤 Digi Ads 一旦合理地认为用户地行为可能违反上
-          述法律、法规，可以在任何时候，不经事先通知终止向该用户提供服务。
-        </p>
-        <p>3. 禁止用户从事以下行为：</p>
-        <ul>
-          <li>以任何方式危害未成年人；</li>
-          <li>冒充任何人或机构，或以虚伪不实的方式谎称或使人误认为与任何人 或任何机构有关；</li>
-          <li>干扰或破坏东坤 Digi Ads 及相关服务或与东坤 Digi Ads 及服务相连 的服务器和网络，或不遵守本协议之规定；</li>
-          <li>故意或非故意违反任何相关的中国法律、法规、规章、条例等其他具 有法律效力的规范；</li>
-          <li>
-            未经东坤 Digi Ads 事先明确书面许可，以任何方式（包括但不限于机
-            器人软件、蜘蛛软件、爬虫软件等任何自动程序、脚本、软件）和任
-            何理由自行或委托他人、协助他人获取平台的服务、内容、数据；
-          </li>
-        </ul>
-        <h2>免责声明</h2>
-        <p>1. 因下列原因导致我们无法正常提供服务，我们免于承担责任：</p>
-        <ul>
-          <li>我们的系统停机维护或升级；</li>
-          <li>因台风、地震、洪水、雷电或恐怖袭击等不可抗力原因；</li>
-          <li>您的设备软硬件和通信线路、供电线路出现故障的；</li>
-          <li>因您操作不当或通过非经我们授权或认可的方式使用我们服务的；</li>
-          <li>
-            因病毒、木马、恶意程序攻击、网络拥堵、系统不稳定、系统或设备
-            故障、通讯故障、电力故障、银行原因、第三方服务瑕疵或政府行为 等原因。
-          </li>
-        </ul>
-        <p>尽管有前款约定，我们将采取合理行动积极促使服务恢复正常。</p>
-        <p>
-          2. 在任何情况下，东坤 Digi Ads 均不对任何间接性、后果性、惩罚性、
-          偶然性、特殊性或刑罚性的损害，包括因您使用东坤 Digi Ads 及相关服 务而遭受的利润损失，承担责任。东坤 Digi Ads
-          对您承担的全部责任， 无论因何原因或何种行为方式，始终不超过您在因使用东坤 Digi Ads 软 件及相关服务而支付给东坤
-          Digi Ads 的费用(如有)。
-        </p>
-        <h2>法律的适用和管辖</h2>
-        <p>
-          本协议之效力、解释、变更、执行与争议解决均适用中华人民共和国法律。
-          您因使用我方服务所产生及与我方平台服务有关的争议，由我方与您协商
-          解决。如经协商不能得到解决时，应提交【广州仲裁委员会】，根据提交
-          仲裁时广州仲裁委员的仲裁规则进行仲裁，仲裁地点在【广州】，仲裁语
-          言为中文。仲裁裁决是终局性的，对各方均有约束力。
-        </p>
-        <h2>服务的变更、中断和终止</h2>
-        <p>
-          1. 您理解并同意，东坤 Digi Ads 基于经营策略的调整，可能会对服务内 容进行变更，也可能会中断、中止或终止服务。
-        </p>
-        <p>
-          2. 您理解并同意，如东坤 Digi Ads 发生合并、分立、收购、资产转让时， 东坤 Digi Ads
-          可向第三方转让本服务下相关资产；东坤 Digi Ads 亦可
-          在单方通知您后，将本协议下部分或全部服务及相应的权利义务转交由第 三方运营或履行。
-        </p>
-        <p>
-          3. 您理解并同意，如您违反相关法律法规的规定、违反本协议及其他东 坤 Digi Ads 相关约定，东坤 Digi Ads
-          有权不经通知而单方中断或终止 向您提供服务。
-        </p>
-        <p>
-          4. 东坤 Digi Ads 终止向您提供服务后，有权根据适用法律的要求删除您
-          的个人信息，或使其匿名化处理，亦有权依照法律法规的期限和方式继续 保存您留存于我方平台的其他内容和信息。
-        </p>
-        <p>
-          5. 您理解并同意，东坤 Digi Ads 运营方需要定期或不定期地对提供的服
-          务或相关的设备进行维护或检修，如因此类情况而造成服务在合理时间内 的中断，东坤 Digi Ads
-          运营方无需为此承担任何责任，但东坤 Digi Ads 运营方应尽可能事先进行通告。
-        </p>
-        <h2>费用条款</h2>
-        <p>1. 当您在东坤 Digi Ads 内购置服务时，请您务必仔细确认所购服务的时 间、内容、限制性要求等重要事项。</p>
-        <p>
-          2. 东坤 Digi Ads 有权决定内置服务的收费方式和资费标准，且东坤 Digi Ads
-          有权根据需要对资费政策随时进行调整。如某服务有可能出现降价或 促销的情况，东坤 Digi Ads 不提供价格保护或退款。
-        </p>
-        <p>
-          3. 用户购买东坤 Digi Ads 内置服务时使用的支付方式由第三方提供，东 坤 Digi Ads
-          对支付过程中可能存在的延迟、错误等问题不承担责任。
-        </p>
-        <h2>未成年人使用条款</h2>
-        <p>
-          1. 东坤 Digi Ads 非常注重未成年人的保护。若您是未成年人，应在监护
-          人监护、指导下阅读本协议，并在取得监护人的同意后使用东坤 Digi Ads 及相关服务。
-        </p>
-        <p>
-          2. 未成年用户理解如因你违反法律法规、本协议内容，则您及您的监护
-          人应依照法律法规承担因此而可能引起的全部法律责任。
-        </p>
-        <h2>条款变更与通知</h2>
-        <p>
-          东坤 Digi Ads 有权在必要的时候修改本协议条款，请您定期查询有关内
-          容。用户如继续使用本协议涉及的服务，则视为对修改内容的同意；用户
-          在不同意修改内容的情况下，应当终止本协议并停止使用相关服务。
-        </p>
-        <h2>联系我们</h2>
-        <p>如果您对本服务协议有任何疑问，可以通过以下方式与我们联系。</p>
-        <p>邮箱：service@superdigiads.com</p>
-        <p>客服微信：Dbgj-Adseasy</p>
-        <p>地址：RM22 2/F FU TAO BUILDING ，NO.98 ARGYLE，STREET KOWLOON HONG KONG</p>
+        <p>Any use of the Site in violation of the foregoing violates these Terms of Use and may result in, among other
+          things, termination or suspension of your rights to use the Site.</p>
+        <h2>10. CONTRIBUTION LICENSE</h2>
+        <p>You and the Site agree that we may access, store, process, and use any information and personal data that you
+          provide following the terms of the Privacy Policy and your choices (including settings).</p>
+        <p>By submitting suggestions or other feedback regarding the Site, you agree that we can use and share  such
+          feedback for any purpose without compensation to you.</p>
+        <p>We do not assert any ownership over your Contributions. You retain full ownership of all of your
+          Contributions and any intellectual property rights or other proprietary rights associated with your
+          Contributions. We are not liable for any statements or representations in your Contributions provided by you
+          in any area on the Site. You are solely responsible for your Contributions to the Site and you expressly agree
+          to exonerate us from any and all responsibility and to refrain from any legal action against us regarding your
+          Contributions.</p>
+        <h2>11. SUBMISSIONS</h2>
+        <p>You acknowledge and agree that any questions, comments, suggestions, ideas, feedback, or other information
+          regarding the Site ("Submissions") provided by you to us are non-confidential and shall become our sole
+          property. We shall own exclusive rights, including all intellectual property rights, and shall be entitled to
+          the unrestricted use and dissemination of these Submissions for any lawful purpose, commercial or otherwise,
+          without acknowledgment or compensation to you. You hereby waive all moral rights to any such Submissions, and
+          you hereby warrant that any such Submissions are original with you or that you have the right to submit such
+          Submissions. You agree there shall be no recourse against us for any alleged or actual infringement or
+          misappropriation of any proprietary right in your Submissions.</p>
+        <h2>12. THIRD-PARTY WEBSITES AND CONTENT</h2>
+        <p>The Site may contain (or you may be sent via the Site) links to other websites ("Third-Party Websites") as
+          well as articles, photographs, text, graphics, pictures, designs, music, sound, video, information,
+          applications, software, and other content or items belonging to or originating from third parties
+          ("Third-Party Content"). Such Third-Party Websites and Third-Party Content are not investigated, monitored, or
+          checked for accuracy, appropriateness, or completeness by us, and we are not responsible for any Third-Party
+          Websites accessed through the Site or any Third-Party Content posted on, available through, or installed from
+          the Site, including the content, accuracy, offensiveness, opinions, reliability, privacy practices, or other
+          policies of or contained in the Third-Party Websites or the Third-Party Content. Inclusion of, linking to, or
+          permitting the use or installation of any Third-Party Websites or any Third-Party Content does not imply
+          approval or endorsement thereof by us. If you decide to leave the Site and access the Third-Party Websites or
+          to use or install any Third-Party Content, you do so at your own risk, and you should be aware these Terms of
+          Use no longer govern. You should review the applicable terms and policies, including privacy and data
+          gathering practices, of any website to which you navigate from the Site or relating to any applications you
+          use or install from the Site. Any purchases you make through Third-Party Websites will be through other
+          websites and from other companies, and we take no responsibility whatsoever in relation to such purchases
+          which are exclusively between you and the applicable third party. You agree and acknowledge that we do not
+          endorse the products or services offered on Third-Party Websites and you shall hold us harmless from any harm
+          caused by your purchase of such products or services. Additionally, you shall hold us harmless from any losses
+          sustained by you or harm caused to you relating to or resulting in any way from any Third-Party Content or any
+          contact with Third-Party Websites.</p>
+        <h2>13. ADVERTISERS</h2>
+        <p>We allow advertisers to display their advertisements and other information in certain areas of the Site, such
+          as sidebar advertisements or banner advertisements. If you are an advertiser, you shall take full
+          responsibility for any advertisements you place on the Site and any services provided on the Site or products
+          sold through those advertisements. Further, as an advertiser, you warrant and represent that you possess all
+          rights and authority to place advertisements on the Site, including, but not limited to, intellectual property
+          rights, publicity rights, and contractual rights. We simply provide the space to place such advertisements,
+          and we have no other relationship with advertisers.</p>
+        <h2>14. U.S. GOVERNMENT RIGHTS</h2>
+        <p>Our services are “commercial items” as defined in Federal Acquisition Regulation (“FAR”) 2.101. If our
+          services are acquired by or on behalf of any agency not within the Department of Defense (“DOD”), our services
+          are subject to the terms of these Terms of Use in accordance with FAR 12.212 (for computer software) and FAR
+          12.211 (for technical data). If our services are acquired by or on behalf of any agency within the Department
+          of Defense, our services are subject to the terms of these Terms of Use in accordance with Defense Federal
+          Acquisition Regulation (“DFARS”) 227.72023. In addition, DFARS 252.2277015 applies to technical data acquired
+          by the DOD. This U.S. Government Rights clause is in lieu of, and supersedes, any other FAR, DFARS, or other
+          clause or provision that addresses government rights in computer software or technical data under these Terms
+          of Use.</p>
+        <h2>15. SITE MANAGEMENT</h2>
+        <p>We reserve the right, but not the obligation, to: (1) monitor the Site for violations of these Terms of Use;
+          (2) take appropriate legal action against anyone who, in our sole discretion, violates the law or these Terms
+          of Use, including without limitation, reporting such user to law enforcement authorities; (3) in our sole
+          discretion and without limitation, refuse, restrict access to, limit the availability of, or disable (to the
+          extent technologically feasible) any of your Contributions or any portion thereof; (4) in our sole discretion
+          and without limitation, notice, or liability, to remove from the Site or otherwise disable all files and
+          content that are excessive in size or are in any way burdensome to our systems; and (5) otherwise manage the
+          Site in a manner designed to protect our rights and property and to facilitate the proper functioning of the
+          Site.</p>
+        <h2>16. PRIVACY POLICY</h2>
+        <p>We care about data privacy and security. By using the Site, you agree to be bound by our Privacy Policy
+          posted on the Site, which is incorporated into these Terms of Use. Please be advised the Site is hosted
+          in China. If you access the Site from any other region of the world with laws or other requirements governing
+          personal data collection, use, or disclosure that differ from applicable laws in China, then through your
+          continued use of the Site, you are transferring your data to China, and you agree to have your data
+          transferred to and processed in China.</p>
+        <h2>17. TERM AND TERMINATION</h2>
+        <p>These Terms of Use shall remain in full force and effect while you use the Site. WITHOUT LIMITING ANY OTHER
+          PROVISION OF THESE TERMS OF USE, WE RESERVE THE RIGHT TO, IN OUR SOLE DISCRETION AND WITHOUT NOTICE OR
+          LIABILITY, DENY ACCESS TO AND USE OF THE SITE (INCLUDING BLOCKING CERTAIN IP ADDRESSES), TO ANY PERSON FOR ANY
+          REASON OR FOR NO REASON, INCLUDING WITHOUT LIMITATION FOR BREACH OF ANY REPRESENTATION, WARRANTY, OR COVENANT
+          CONTAINED IN THESE TERMS OF USE OR OF ANY APPLICABLE LAW OR REGULATION. WE MAY TERMINATE YOUR USE OR
+          PARTICIPATION IN THE SITE OR DELETE YOUR ACCOUNT AND ANY CONTENT OR INFORMATION THAT YOU POSTED AT ANY TIME,
+          WITHOUT WARNING, IN OUR SOLE DISCRETION.</p>
+        <p>If we terminate or suspend your account for any reason, you are prohibited from registering and creating a
+          new account under your name, a fake or borrowed name, or the name of any third party, even if you may be
+          acting on behalf of the third party. In addition to terminating or suspending your account, we reserve the
+          right to take appropriate legal action, including without limitation pursuing civil, criminal, and injunctive
+          redress.</p>
+        <h2>18. MODIFICATIONS AND INTERRUPTIONS</h2>
+        <p>We reserve the right to change, modify, or remove the contents of the Site at any time or for any reason at
+          our sole discretion without notice. However, we have no obligation to update any information on our Site. We
+          also reserve the right to modify or discontinue all or part of the Site without notice at any time. We will
+          not be liable to you or any third party for any modification, price change, suspension, or discontinuance of
+          the Site.</p>
+        <p>We cannot guarantee the Site will be available at all times. We may experience hardware, software, or other
+          problems or need to perform maintenance related to the Site, resulting in interruptions, delays, or errors. We
+          reserve the right to change, revise, update, suspend, discontinue, or otherwise modify the Site at any time or
+          for any reason without notice to you. You agree that we have no liability whatsoever for any loss, damage, or
+          inconvenience caused by your inability to access or use the Site during any downtime or discontinuance of the
+          Site. Nothing in these Terms of Use will be construed to obligate us to maintain and support the Site or to
+          supply any corrections, updates, or releases in connection therewith.</p>
+        <h2>19. GOVERNING LAW</h2>
+        <p>These Terms shall be governed by and defined following the laws of China. ADSEASY PTE.LTD. and yourself
+          irrevocably consent that the courts of China shall have exclusive jurisdiction to resolve any dispute which
+          may arise in connection with these terms.</p>
+        <h2>20. DISPUTE RESOLUTION</h2>
+        <h4>Binding Arbitration</h4>
+        <p>Any dispute arising out of or in connection with this contract, including any question regarding its
+          existence, validity, or termination, shall be referred to and finally resolved by the International Commercial
+          Arbitration Court under the European Arbitration Chamber (Belgium, Brussels, Avenue Louise, 146)  according to
+          the Rules of this ICAC, which, as a result of referring to it, is considered as the part of this clause. The
+          number of arbitrators shall be one (1). The seat, or legal place, of arbitration shall be Shenzhen, China. The
+          language to be used in the arbitral proceedings shall be Chinese. The governing law of the contract shall be
+          the substantive law of China.</p>
+        <h4>Restrictions</h4>
+        <p>The Parties agree that any arbitration shall be limited to the Dispute between the Parties individually. To
+          the full extent permitted by law, (a) no arbitration shall be joined with any other proceeding; (b) there is
+          no right or authority for any Dispute to be arbitrated on a class-action basis or to utilize class action
+          procedures; and (c) there is no right or authority for any Dispute to be brought in a purported representative
+          capacity on behalf of the general public or any other persons.</p>
+        <h4>Exceptions to Arbitration</h4>
+        <p>The Parties agree that the following Disputes are not subject to the above provisions concerning binding
+          arbitration: (a) any Disputes seeking to enforce or protect, or concerning the validity of, any of the
+          intellectual property rights of a Party; (b) any Dispute related to, or arising from, allegations of theft,
+          piracy, invasion of privacy, or unauthorized use; and (c) any claim for injunctive relief. If this provision
+          is found to be illegal or unenforceable, then neither Party will elect to arbitrate any Dispute falling within
+          that portion of this provision found to be illegal or unenforceable and such Dispute shall be decided by a
+          court of competent jurisdiction within the courts listed for jurisdiction above, and the Parties agree to
+          submit to the personal jurisdiction of that court.</p>
+        <h2>21. CORRECTIONS</h2>
+        <p>There may be information on the Site that contains typographical errors, inaccuracies, or omissions,
+          including descriptions, pricing, availability, and various other information. We reserve the right to correct
+          any errors, inaccuracies, or omissions and to change or update the information on the Site at any time,
+          without prior notice.</p>
+        <h2>22. DISCLAIMER</h2>
+        <p>THE SITE IS PROVIDED ON AN AS-IS AND AS-AVAILABLE BASIS. YOU AGREE THAT YOUR USE OF THE SITE AND OUR SERVICES
+          WILL BE AT YOUR SOLE RISK. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR
+          IMPLIED, IN CONNECTION WITH THE SITE AND YOUR USE THEREOF, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
+          WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE MAKE NO WARRANTIES
+          OR REPRESENTATIONS ABOUT THE ACCURACY OR COMPLETENESS OF THE SITE’S CONTENT OR THE CONTENT OF ANY WEBSITES
+          LINKED TO THE SITE AND WE WILL ASSUME NO LIABILITY OR RESPONSIBILITY FOR ANY (1) ERRORS, MISTAKES, OR
+          INACCURACIES OF CONTENT AND MATERIALS, (2) PERSONAL INJURY OR PROPERTY DAMAGE, OF ANY NATURE WHATSOEVER,
+          RESULTING FROM YOUR ACCESS TO AND USE OF THE SITE, (3) ANY UNAUTHORIZED ACCESS TO OR USE OF OUR SECURE SERVERS
+          AND/OR ANY AND ALL PERSONAL INFORMATION AND/OR FINANCIAL INFORMATION STORED THEREIN, (4) ANY INTERRUPTION OR
+          CESSATION OF TRANSMISSION TO OR FROM THE SITE, (5) ANY BUGS, VIRUSES, TROJAN HORSES, OR THE LIKE WHICH MAY BE
+          TRANSMITTED TO OR THROUGH THE SITE BY ANY THIRD PARTY, AND/OR (6) ANY ERRORS OR OMISSIONS IN ANY CONTENT AND
+          MATERIALS OR FOR ANY LOSS OR DAMAGE OF ANY KIND INCURRED AS A RESULT OF THE USE OF ANY CONTENT POSTED,
+          TRANSMITTED, OR OTHERWISE MADE AVAILABLE VIA THE SITE. WE DO NOT WARRANT, ENDORSE, GUARANTEE, OR ASSUME
+          RESPONSIBILITY FOR ANY PRODUCT OR SERVICE ADVERTISED OR OFFERED BY A THIRD PARTY THROUGH THE SITE, ANY
+          HYPERLINKED WEBSITE, OR ANY WEBSITE OR MOBILE APPLICATION FEATURED IN ANY BANNER OR OTHER ADVERTISING, AND WE
+          WILL NOT BE A PARTY TO OR IN ANY WAY BE RESPONSIBLE FOR MONITORING ANY TRANSACTION BETWEEN YOU AND ANY
+          THIRD-PARTY PROVIDERS OF PRODUCTS OR SERVICES. AS WITH THE PURCHASE OF A PRODUCT OR SERVICE THROUGH ANY MEDIUM
+          OR IN ANY ENVIRONMENT, YOU SHOULD USE YOUR BEST JUDGMENT AND EXERCISE CAUTION WHERE APPROPRIATE.</p>
+        <h2>23. LIMITATIONS OF LIABILITY</h2>
+        <p>IN NO EVENT WILL WE OR OUR DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY
+          DIRECT, INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFIT,
+          LOST REVENUE, LOSS OF DATA, OR OTHER DAMAGES ARISING FROM YOUR USE OF THE SITE, EVEN IF WE HAVE BEEN ADVISED
+          OF THE POSSIBILITY OF SUCH DAMAGES. NOTWITHSTANDING ANYTHING TO THE CONTRARY CONTAINED HEREIN, OUR LIABILITY
+          TO YOU FOR ANY CAUSE WHATSOEVER AND REGARDLESS OF THE FORM OF THE ACTION, WILL AT ALL TIMES BE LIMITED TO  THE
+          LESSER OF THE AMOUNT PAID, IF ANY, BY YOU TO US  DURING THE SIX (6) MONTH PERIOD PRIOR TO ANY CAUSE OF
+          ACTION ARISING OR $500.00 USD. CERTAIN US STATE LAWS AND INTERNATIONAL LAWS DO NOT ALLOW LIMITATIONS ON
+          IMPLIED WARRANTIES OR THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES. IF THESE LAWS APPLY TO YOU, SOME OR ALL
+          OF THE ABOVE DISCLAIMERS OR LIMITATIONS MAY NOT APPLY TO YOU, AND YOU MAY HAVE ADDITIONAL RIGHTS.</p>
+        <h2>24. INDEMNIFICATION</h2>
+        <p>You agree to defend, indemnify, and hold us harmless, including our subsidiaries, affiliates, and all of our
+          respective officers, agents, partners, and employees, from and against any loss, damage, liability, claim, or
+          demand, including reasonable attorneys’ fees and expenses, made by any third party due to or arising out
+          of: (1) use of the Site; (2) breach of these Terms of Use; (3) any breach of your representations and
+          warranties set forth in these Terms of Use; (4) your violation of the rights of a third party, including but
+          not limited to intellectual property rights; or (5) any overt harmful act toward any other user of the Site
+          with whom you connected via the Site. Notwithstanding the foregoing, we reserve the right, at your expense, to
+          assume the exclusive defense and control of any matter for which you are required to indemnify us, and you
+          agree to cooperate, at your expense, with our defense of such claims. We will use reasonable efforts to notify
+          you of any such claim, action, or proceeding which is subject to this indemnification upon becoming aware of
+          it.</p>
+        <h2>25. USER DATA</h2>
+        <p>We will maintain certain data that you transmit to the Site for the purpose of managing the performance of
+          the Site, as well as data relating to your use of the Site. Although we perform regular routine backups of
+          data, you are solely responsible for all data that you transmit or that relates to any activity you have
+          undertaken using the Site. You agree that we shall have no liability to you for any loss or corruption of any
+          such data, and you hereby waive any right of action against us arising from any such loss or corruption of
+          such data.</p>
+        <h2>26. ELECTRONIC COMMUNICATIONS, TRANSACTIONS, AND SIGNATURES</h2>
+        <p>Visiting the Site, sending us emails, and completing online forms constitute electronic communications. You
+          consent to receive electronic communications, and you agree that all agreements, notices, disclosures, and
+          other communications we provide to you electronically, via email and on the Site, satisfy any legal
+          requirement that such communication be in writing. YOU HEREBY AGREE TO THE USE OF ELECTRONIC SIGNATURES,
+          CONTRACTS, ORDERS, AND OTHER RECORDS, AND TO ELECTRONIC DELIVERY OF NOTICES, POLICIES, AND RECORDS OF
+          TRANSACTIONS INITIATED OR COMPLETED BY US OR VIA THE SITE. You hereby waive any rights or requirements under
+          any statutes, regulations, rules, ordinances, or other laws in any jurisdiction which require an original
+          signature or delivery or retention of non-electronic records, or to payments or the granting of credits by any
+          means other than electronic means.</p>
+        <h2>27. CALIFORNIA USERS AND RESIDENTS</h2>
+        <p>If any complaint with us is not satisfactorily resolved, you can contact the Complaint Assistance Unit of the
+          Division of Consumer Services of the California Department of Consumer Affairs in writing at 1625 North Market
+          Blvd., Suite N 112, Sacramento, California 95834 or by telephone at (800) 952-5210 or (916) 445-1254.</p>
+
+        <h2>28. MISCELLANEOUS</h2>
+        <p>These Terms of Use and any policies or operating rules posted by us on the Site or in respect to the Site
+          constitute the entire agreement and understanding between you and us. Our failure to exercise or enforce any
+          right or provision of these Terms of Use shall not operate as a waiver of such right or provision. These Terms
+          of Use operate to the fullest extent permissible by law. We may assign any or all of our rights and
+          obligations to others at any time. We shall not be responsible or liable for any loss, damage, delay, or
+          failure to act caused by any cause beyond our reasonable control. If any provision or part of a provision of
+          these Terms of Use is determined to be unlawful, void, or unenforceable, that provision or part of the
+          provision is deemed severable from these Terms of Use and does not affect the validity and enforceability of
+          any remaining provisions. There is no joint venture, partnership, employment or agency relationship created
+          between you and us as a result of these Terms of Use or use of the Site. You agree that these Terms of Use
+          will not be construed against us by virtue of having drafted them. You hereby waive any and all defenses you
+          may have based on the electronic form of these Terms of Use and the lack of signing by the parties hereto to
+          execute these Terms of Use.</p>
+
+        <h2>29. CONTACT US</h2>
+        <p>In order to resolve a complaint regarding the Site or to receive further information regarding use of the
+          Site, please contact us at:</p>
+        <h3>ADSEASY PTE.LTD.</h3>
+        <h3>112 ROBINSON ROAD</h3>
+        <h3>#03-01</h3>
+        <h3>ROBINSON 112</h3>
+        <h3>SINGAPORE(068902)</h3>
+        <h3><a href="service@superdigiads.com">service@superdigiads.com</a></h3>
       </template>
     </div>
   </com-modal>
@@ -449,17 +1322,38 @@ export default {
 </script>
 <style  lang="less" scoped>
 .content {
+  text-align: left !important;
+
+  // .title {
+  //   font-size: 35px;
+  // }
+
   h2 {
-    padding: 20px 0;
+    font-size: 28px;
+    padding: 45px 0 20px 0;
   }
 
   h3 {
+    font-size: 25px;
     padding: 10px 0;
   }
 
+  h4 {
+    font-size: 22px;
+    line-height: 36px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #5073ff;
+  }
+
+
+
   p {
-    line-height: 30px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 33px;
+
 
     span {
       display: block;
@@ -467,10 +1361,51 @@ export default {
     }
   }
 
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid #e5e6e9;
+  }
+
+  th {
+    padding: 10px;
+  }
+
+  td {
+    text-align: left;
+    height: 50px;
+    // vertical-align: bottom;
+    padding: 10px;
+  }
+
   ul>li {
     list-style-type: disc;
     list-style-position: inside;
-    margin-bottom: 10px;
+    padding: 5px 0;
+    font-size: 20px;
+    line-height: 30px;
+
+    p {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
   }
+
+  span {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 35px;
+    margin-bottom: 25px;
+  }
+
+  ul li::marker {
+    color: #5073ff;
+  }
+
 }
 </style>

@@ -100,7 +100,8 @@
             <span v-if="timerRun" class="form-captcha__wait">
               {{ timeSecouds + $t('n_auth.msg.captcha_wait') }}
             </span>
-            <el-button v-else @click="sendCaptcha({ modal: true })" :loading="captchaLoading">{{ $t('n_auth.btn.captcha')
+            <el-button v-else @click="sendCaptcha({ modal: true })" :loading="captchaLoading">{{
+                $t('n_auth.btn.captcha')
             }}</el-button>
           </div>
         </el-form-item>
@@ -114,11 +115,13 @@
   </div>
 </template>
 <script>
+
 import AUTH_API from '@/api/auth'
+import store from '@/store'
 import util from '@/libs/util'
 import auth from '@/libs/auth'
 import PratAgreement from '@/components/part/PratAgreement'
-// import { mobileRegExp } from '@/constants/config'
+import { LOCAL_URL } from '@/constants/config'
 export default {
   components: {
     PratAgreement
@@ -133,7 +136,9 @@ export default {
       this.countdown(+timeStamp)
     }
   },
-  mounted() { },
+  mounted() {
+    store.dispatch('global/locate/setLocate', 'CN')
+  },
   watch: {},
   computed: {},
   data() {
@@ -192,7 +197,7 @@ export default {
     // checkLogin
     tokenCheck() {
       AUTH_API.tokenCheck({ appKey: this.appKey }).then(res => {
-        if (res?.value?.isLogin) {
+        if (res?.value?.token) {
           window.location.href = `${res.value.callback}?token=${res.value.token}`
         } else {
           this.welcomeTitle = res.value.welcomeTitle
@@ -277,7 +282,13 @@ export default {
                   showClose: true,
                   duration: 1500
                 })
-                window.location.href = `${res.value.callback}?token=${res.value.token}`
+                let callbackUrl = ''
+                const isLocal = util.isLocal()
+                if (isLocal) {
+                  const hit = LOCAL_URL.find(v => params.params.appKey === v.code)
+                  if (hit) callbackUrl = `${hit.callback}?token=${res.value.token}`
+                } else callbackUrl = `${res.value.callback}?token=${res.value.token}`
+                window.location.href = callbackUrl
               } else {
                 this.$message.error(res.value?.errorTips)
               }

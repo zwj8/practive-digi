@@ -11,12 +11,8 @@
         <div class="form-wrapper">
           <!-- 账号密码登录 -->
           <van-form v-show="activeName === 'pw'" ref="formKey" :show-error-message="false">
-            <van-field
-              v-model="form.loginKey"
-              size="large"
-              :placeholder="$t('n_auth.placeholder.act')"
-              :rules="pwRules.loginKey"
-            >
+            <van-field v-model="form.loginKey" size="large" :placeholder="$t('n_auth.placeholder.act')"
+              :rules="pwRules.loginKey">
               <template #label>
                 <div class="form-area">
                   <label class="form-area__label" for="select_area">
@@ -26,11 +22,7 @@
                       <van-icon name="arrow-down" />
                     </div>
                     <select id="select_area" @change="selectChange">
-                      <option
-                        v-for="item in areaCodeOptions"
-                        :key="item.addr"
-                        :value="`${JSON.stringify(item)}`"
-                      >
+                      <option v-for="item in areaCodeOptions" :key="item.addr" :value="`${JSON.stringify(item)}`">
                         {{ language == 'zh' ? `${item.name} ${item.code}` : `${item.abbr} ${item.code}` }}
                       </option>
                     </select>
@@ -38,29 +30,15 @@
                 </div>
               </template>
             </van-field>
-            <van-field
-              v-model="form.secret"
-              size="large"
-              type="password"
-              :rules="pwRules.secret"
-              :placeholder="$t('auth.placeholder_secret')"
-            >
+            <van-field v-model="form.secret" size="large" type="password" :rules="pwRules.secret"
+              :placeholder="$t('auth.placeholder_secret')">
             </van-field>
           </van-form>
 
           <!-- 验证码登录 -->
-          <van-form
-            v-show="activeName === 'phone'"
-            ref="formCaptcha"
-            :show-error-message="false"
-          >
-            <van-field
-              v-model="form.phone"
-              size="large"
-              name="phone"
-              :placeholder="$t('n_auth.placeholder.contact')"
-              :rules="phoneRules.phone"
-            >
+          <van-form v-show="activeName === 'phone'" ref="formCaptcha" :show-error-message="false">
+            <van-field v-model="form.phone" size="large" name="phone" :placeholder="$t('n_auth.placeholder.contact')"
+              :rules="phoneRules.phone">
               <template #label>
                 <div class="form-area">
                   <label class="form-area__label" for="select_area">
@@ -70,11 +48,7 @@
                       <van-icon name="arrow-down" />
                     </div>
                     <select id="select_area" @change="selectChange">
-                      <option
-                        v-for="item in areaCodeOptions"
-                        :key="item.addr"
-                        :value="`${JSON.stringify(item)}`"
-                      >
+                      <option v-for="item in areaCodeOptions" :key="item.addr" :value="`${JSON.stringify(item)}`">
                         {{ language == 'zh' ? `${item.name} ${item.code}` : `${item.abbr} ${item.code}` }}
                       </option>
                     </select>
@@ -82,23 +56,12 @@
                 </div>
               </template>
             </van-field>
-            <van-field
-              v-model="form.captcha"
-              center
-              clearable
-              name="captcha"
-              :placeholder="$t('n_auth.placeholder.captcha')"
-              :rules="phoneRules.captcha"
-            >
+            <van-field v-model="form.captcha" center clearable name="captcha"
+              :placeholder="$t('n_auth.placeholder.captcha')" :rules="phoneRules.captcha">
               <template #button>
-                <span v-if="timerRun" class="captch-wait">{{ timeSecouds + $t('n_auth.msg.captcha_wait')}}</span>
-                <van-button
-                  v-else
-                  size="small"
-                  :loading="captchaLoading"
-                  color="#385ff0"
-                  @click.prevent="sendCaptcha({ modal: false })"
-                >{{ $t('n_auth.btn.captcha') }}</van-button>
+                <span v-if="timerRun" class="captch-wait">{{ timeSecouds + $t('n_auth.msg.captcha_wait') }}</span>
+                <van-button v-else size="small" :loading="captchaLoading" color="#385ff0"
+                  @click.prevent="sendCaptcha({ modal: false })">{{ $t('n_auth.btn.captcha') }}</van-button>
               </template>
             </van-field>
           </van-form>
@@ -114,13 +77,9 @@
       </van-col>
       <van-col span="24">
         <div class="btn-wrapper">
-          <van-button
-            :loading="loading"
-            type="info"
-            size="large"
-            color="#385ff0"
-            @click="validLogin"
-          >{{ $t('n_auth.btn.login') }}</van-button>
+          <van-button :loading="loading" type="info" size="large" color="#385ff0" @click="validLogin">{{
+              $t('n_auth.btn.login')
+          }}</van-button>
         </div>
       </van-col>
       <van-col span="24">
@@ -130,18 +89,10 @@
       </van-col>
     </van-row>
     <!-- 手机验证弹窗 -->
-    <van-popup
-      v-model="modalVisible"
-      :style="{ height: 'auto', width: '90%' }"
-    >
+    <van-popup v-model="modalVisible" :style="{ height: 'auto', width: '90%' }">
       <van-form ref="formModalCaptcha" :show-error-message="false">
-        <van-field
-          v-model="form.modalPhone"
-          size="large"
-          name="modalPhone"
-          :placeholder="$t('n_auth.placeholder.contact')"
-          :rules="modalRules.modalPhone"
-        >
+        <van-field v-model="form.modalPhone" size="large" name="modalPhone"
+          :placeholder="$t('n_auth.placeholder.contact')" :rules="modalRules.modalPhone">
           <template #label>
             <div class="form-area">
               <label class="form-area__label" for="select_area">
@@ -151,11 +102,7 @@
                   <van-icon name="arrow-down" />
                 </div>
                 <select id="select_area" @change="selectChange">
-                  <option
-                    v-for="item in areaCodeOptions"
-                    :key="item.addr"
-                    :value="`${JSON.stringify(item)}`"
-                  >
+                  <option v-for="item in areaCodeOptions" :key="item.addr" :value="`${JSON.stringify(item)}`">
                     {{ language == 'zh' ? `${item.name} ${item.code}` : `${item.abbr} ${item.code}` }}
                   </option>
                 </select>
@@ -163,34 +110,17 @@
             </div>
           </template>
         </van-field>
-        <van-field
-          v-model="form.modalCaptcha"
-          center
-          clearable
-          name="modalCaptcha"
-          :placeholder="$t('n_auth.placeholder.captcha')"
-          :rules="modalRules.modalCaptcha"
-        >
+        <van-field v-model="form.modalCaptcha" center clearable name="modalCaptcha"
+          :placeholder="$t('n_auth.placeholder.captcha')" :rules="modalRules.modalCaptcha">
           <template #button>
-            <span v-if="timerRun" class="captch-wait">{{ timeSecouds + $t('n_auth.msg.captcha_wait')}}</span>
-            <van-button
-              v-else
-              :loading="captchaLoading"
-              size="small"
-              color="#385ff0"
-              @click.prevent="sendCaptcha({ modal: true })"
-            >{{ $t('n_auth.btn.captcha') }}</van-button>
+            <span v-if="timerRun" class="captch-wait">{{ timeSecouds + $t('n_auth.msg.captcha_wait') }}</span>
+            <van-button v-else :loading="captchaLoading" size="small" color="#385ff0"
+              @click.prevent="sendCaptcha({ modal: true })">{{ $t('n_auth.btn.captcha') }}</van-button>
           </template>
         </van-field>
         <div class="modal-btn">
-          <van-button
-            :loading="loading"
-            type="info"
-            size="large"
-            color="#385ff0"
-            @click="validateCaptcha"
-          >
-          {{ $t('n_auth.btn.completed_sgin') }}
+          <van-button :loading="loading" type="info" size="large" color="#385ff0" @click="validateCaptcha">
+            {{ $t('n_auth.btn.completed_sgin') }}
           </van-button>
         </div>
       </van-form>
@@ -217,7 +147,7 @@ export default {
   },
   filters: {},
   props: {},
-  data () {
+  data() {
     return {
       loading: false,
       appKey: null,
@@ -265,25 +195,27 @@ export default {
     ...mapGetters('global/config', ['areaCodeOptions'])
   },
   watch: {
+
     areaCodeOptions: {
+
       immediate: true,
-      handler (value) {
+      handler(value) {
         if (value?.length) {
           this.handleChecked(value[0])
         }
       }
     }
   },
-  created () {
+  created() {
     this.initial()
   },
-  mounted () {},
+
   methods: {
     /**
      * @description: 初始化
      * @return {*}
      */
-    initial () {
+    initial() {
       this.$store.dispatch('global/config/check', 'areaCode')
       this.loading = false
       this.appKey = this.$route.query?.appKey
@@ -296,21 +228,21 @@ export default {
       }
     },
     // checkLogin
-    tokenCheck () {
+    tokenCheck() {
       AUTH_API.tokenCheck({ appKey: this.appKey }).then(res => {
         if (res?.value?.isLogin) {
           window.location.href = `${res.value.callback}?token=${res.value.token}`
         } else {
           this.welcomeTitle = res.value.welcomeTitle
         }
-      }).catch(e => {})
+      }).catch(e => { })
     },
     /**
      * @description: 选择区号
      * @param {*} evnet
      * @return {*}
      */
-    selectChange (event) {
+    selectChange(event) {
       let item = event.target.value
       if (item) {
         item = JSON.parse(item)
@@ -322,7 +254,7 @@ export default {
      * @param {*} item 被选项
      * @return {*}
      */
-    handleChecked (item) {
+    handleChecked(item) {
       this.checkedAreaCodeLabel = this.language === 'zh'
         ? `${item.name} ${item.code}`
         : `${item.abbr} ${item.code}`
@@ -332,7 +264,7 @@ export default {
      * @description: 处理登录/注册传参
      * @return {*} 返回传参
      */
-    foramtParams () {
+    foramtParams() {
       const params = {
         refName: '',
         params: {
@@ -357,7 +289,7 @@ export default {
       params.params.areaCode = this.form.areaCode
       return params
     },
-    validLogin () {
+    validLogin() {
       const params = this.foramtParams()
       this.$refs[params.refName].validate().then(() => {
         this.Login()
@@ -367,7 +299,7 @@ export default {
      * @description: 登录/注册
      * @return {*}
      */
-    Login () {
+    Login() {
       this.loading = true
       const params = this.foramtParams()
       AUTH_API.LoginAndSign(params.params).then(res => {
@@ -407,7 +339,7 @@ export default {
       })
     },
     // 发送验证码
-    sendCaptcha (args) {
+    sendCaptcha(args) {
       let phoneName = 'phone'
       let refName = 'formCaptcha'
       if (args?.modal) {
@@ -442,7 +374,7 @@ export default {
      * @param {*} ts 初始值
      * @return {*}
      */
-    countdown (ts) {
+    countdown(ts) {
       const now = new Date()
       this.timeSecouds = ts
         ? parseInt((ts - now.getTime()) / 1000) <= 0
@@ -474,7 +406,7 @@ export default {
      * @description: 完成注册，手机和验证码验证
      * @return {*}
      */
-    validateCaptcha () {
+    validateCaptcha() {
       this.$refs.formModalCaptcha.validate().then(() => {
         this.Login()
       }).catch(e => {
@@ -486,7 +418,7 @@ export default {
      * @param {*} type
      * @return {*}
      */
-    handleType () {
+    handleType() {
       this.$refs.formKey?.resetValidation()
       this.$refs.formCaptcha?.resetValidation()
       this.$refs.formModalCaptcha?.resetValidation()
@@ -503,7 +435,7 @@ export default {
      * @param {*} type
      * @return {*}
      */
-    goPolicy (type) {
+    goPolicy(type) {
       this.$router.push({
         name: 'policy',
         query: {
@@ -523,25 +455,30 @@ export default {
     .flex-cc;
     flex-flow: column;
   }
+
   &-title {
     font-size: 30px;
     font-weight: bold;
     color: #fff;
   }
+
   &-desc {
     font-size: 18px;
     color: #fff;
   }
 }
+
 .form {
   &-wrapper {
     padding-top: 20px;
     margin-bottom: 20px;
     position: relative;
+
     &::after {
       .half-line;
     }
   }
+
   &-area {
     border-right: .5px solid @color-border-light-gray;
     font-size: 13px;
@@ -550,16 +487,19 @@ export default {
       padding: 0 10px;
       display: inline-block;
       vertical-align: middle;
-      & > i {
+
+      &>i {
         font-size: 12px;
         display: block;
       }
     }
+
     &__label {
       position: relative;
       .flex-sbc;
       flex-flow: row nowrap;
-      & > select {
+
+      &>select {
         position: absolute;
         left: 0;
         right: 0;
@@ -569,15 +509,18 @@ export default {
     }
   }
 }
+
 .agreement {
   &-wrapper {
     text-align: center;
-    & > span {
+
+    &>span {
       color: @color-font-secondary;
       font-size: 12px;
       margin: 0 5px;
     }
   }
+
   &-label {
     position: relative;
     border-bottom: .5px solid @color-font-secondary;
@@ -595,7 +538,8 @@ export default {
   &-wrapper {
     padding: 10px;
     padding-top: 20px;
-    & > span {
+
+    &>span {
       color: @color-light-primary-80;
     }
   }

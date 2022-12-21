@@ -30,7 +30,7 @@
 import AUTH_API from '@/api/auth'
 export default {
   components: {},
-  data () {
+  data() {
     const validateConfirmPassword = (rule, value, callback) => {
       if (value !== this.form.password) {
         callback(new Error(this.$t('valid.confirm_secret_error')))
@@ -60,7 +60,7 @@ export default {
   watch: {
     form: {
       deep: true,
-      handler (newValue) {
+      handler(newValue) {
         this.btnDisabled = false
         for (const key in newValue) {
           if (newValue[key] === '') {
@@ -72,7 +72,7 @@ export default {
     }
   },
   methods: {
-    sendResetCaptcha () {
+    sendResetCaptcha() {
       AUTH_API.SendEmail({
         email: this.email
       }).then(res => {
@@ -83,7 +83,7 @@ export default {
         })
       })
     },
-    resetPasswd () {
+    resetPasswd() {
       this.$refs.form.validate(valid => {
         if (valid) {
           AUTH_API.ResetSecret({
@@ -103,7 +103,7 @@ export default {
       })
     }
   },
-  mounted () {
+  mounted() {
     // 如果email为空，则直接跳回首页
     if (this.$route?.query?.email) {
       // 设置email
@@ -123,25 +123,31 @@ export default {
 </script>
 <style  lang="less" scoped>
 @import '@/assets/part/part.auth.less';
+
 .m-b {
   margin-bottom: 30px;
 }
+
 .reset {
   .reglog-public;
+
   &-box {
     margin: 0 auto;
     width: 500px;
     display: flex;
     flex-flow: column;
     align-items: center;
+
     h1 {
       .m-b;
     }
+
     p {
       line-height: 30px;
       text-align: center;
       .m-b;
     }
+
     .el-form {
       width: 100%;
       .m-b;

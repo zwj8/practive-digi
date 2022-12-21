@@ -27,41 +27,6 @@ const frameOut = [
     //   })
     // }
   },
-
-  // 北美认证登录
-  {
-path:'/us',
-name: 'us',
-component:routerView,
-redirect:{ name: 'usLogin'},
-children:[
-      //北美登录页
-      {
-        path:'login',
-        name:'usLogin',
-        component: ()=> import('@/views/us/Login.vue')
-      },
-      //北美忘记密码
-      {
-        path: 'ForgotPasswd',
-        name: 'ForgotPasswd',
-        component: () => import('@/views/us/password/ForgotPasswd.vue')
-      },
-      //北美注册详情页面
-      {
-        path: 'register',
-        name: 'usregister',
-        component: () => import('@/views/us/password/RegisterDetail.vue')
-      },
-    ]
-  },
-  //用户激活页面  /:appkey/:region/:lan/:email/:code
-  {
-    path: '/user-active/:appkey/:region/:lan/:email/:code',
-    name: 'UserActive',
-    component: () => import('@/views/us/password/UserActive.vue')
-  },
-
   {
     path: '/signup',
     name: 'signUp',
@@ -144,6 +109,52 @@ children:[
         component: () => import('@/views/mobile/Policy')
       }
     ]
+  },
+  // 北美认证登录
+  {
+    path: '/us',
+    name: 'us',
+    component: routerView,
+    redirect: { name: 'usLogin' },
+    children: [
+      // 登录页
+      {
+        path: 'login',
+        name: 'usLogin',
+        component: () => import('@/views/us/Login.vue')
+      },
+      // 注册详情页
+      {
+        path: 'register',
+        name: 'usRegister',
+        component: () => import('@/views/us/passwd/RegisterDetail.vue')
+      },
+      // 忘记密码
+      {
+        path: 'password',
+        name: 'usPassword',
+        component: () => import('@/views/us/passwd/ForgotPasswd.vue')
+      },
+      // 重置密码
+      {
+        path: 'reset',
+        name: 'usReset',
+        component: () => import('@/views/us/passwd/ResetSecret.vue')
+      },
+      // 等待激活
+      {
+        path: 'wait-active',
+        name: 'usWaitActive',
+        component: () => import('@/views/us/WaitActivation.vue')
+      },
+    ]
+  },
+  // /:appKey/:locate/:language/:email/:code
+  // 用户激活
+  {
+    path: '/user-active/:appKey/:locate/:language/:email/:code',
+    name: 'userActive',
+    component: () => import('@/views/UserActive')
   }
 ]
 

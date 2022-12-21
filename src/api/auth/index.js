@@ -32,7 +32,17 @@ AUTH.tokenCheck = params => { return axios.get('/auth/authorize', { params: para
 // 用户登录/注册
 AUTH.LoginAndSign = params => { return axios.post('/auth/v2/sign', params) }
 
-// 用户点击链接舔砖的激活页面
-AUTH.activatAccount = ({appKey, region, lan, email,code}) => { return axios.get(`/auth/user-active/${appKey}/${region}/${lan}/${email}/${code}`) }
+// 用户地区定位
+AUTH.Locate = () => { return axios.post('/auth/locate') }
+
+//  北美用户注册
+AUTH.NorthSign = params => { return axios.post('/auth/us/signUp', params) }
+
+//  北美用户发送激活邮件
+AUTH.ActiveEmail = params => { return axios.post('/auth/active-email/send', params) }
+
+//  北美用户激活接口
+AUTH.UserActivate = ({ appKey, locate, language, email, code }) => { return axios.get(`/auth/user-active/${appKey}/${locate}/${language}/${email}/${code}`) }
+
 
 export default AUTH

@@ -5,6 +5,7 @@ export const MOBILE_WEBSITE = process.env.VUE_APP_MOBILE_WEBSITE
 export const API_GATEWAY = process.env.VUE_APP_API_GATEWAY
 export const ROUTER_BASE = process.env.VUE_APP_ROUTER_BASE
 export const PERMISSION_GROUP = '/front'
+export const CURRENT_MODE = process.env.VUE_APP_MODE
 
 // OSS图片前缀
 export const OSS_PREFIX = 'https://dk-front.oss-accelerate.aliyuncs.com'
@@ -17,6 +18,7 @@ export const COOKIE = {
   UID: 'uid',
   AID: 'aid',
   LANG: 'lang',
+  LOCATE: 'locate',
   SIDEBAR_COLLAPSE: 'sidebar_collapse',
   NAVBAR_LOCK: 'navbar_lock'
 }
@@ -34,5 +36,9 @@ export const TIME = {
     PERMISSION_DEFAULT_EXPIRE: 600000,
     // 权限刷新频率限制(ms) - 30s
     PERMISSION_REFRESH_LIMIT: 30000
+  },
+  COOKIE: {
+    // 地区过期时间(ms) - 7天
+    LOCATE_EXPIRE: 604800000
   }
 }

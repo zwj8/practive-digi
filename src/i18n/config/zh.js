@@ -111,7 +111,9 @@ zh.n_auth = {
     captcha_wait: ' 秒后可重发',
     login_success: '登录成功',
     sign_error: '注册失败，请稍后重试',
-    send_captcha: '验证码已发送，请注意查收。'
+    send_captcha: '验证码已发送，请注意查收。',
+    logouting: '正在退出登录...',
+    logout_faild: '退出登录失败，请刷新页面重试！'
   }
 }
 

@@ -44,6 +44,13 @@ export const WEEK = {
   }
 }
 
+// 本地环境地址
+export const LOCAL_URL = [
+  { code: 'DIGIADS-WEB', callback: 'http://www.local.superdigiads.com:8081/callback' },
+  { code: 'DIGIADS-ADMIN', callback: 'http://admin.local.superdigiads.com:8082/callback' },
+  { code: 'ADSEASY-WEB', callback: 'http://www.local.adseasy.cn:8083/callback' }
+]
+
 // 语言
 export const LANG = [
   { code: 'zh', upperCode: 'ZH', name: '中文', zhName: '中文' },
@@ -73,4 +80,28 @@ export const LANG = [
 // 手机验证规则
 export const mobileRegExp = [
   { code: 'CN', reg: /^1[3|4|5|7|8][0-9]\d{8}$/ }
+]
+
+// 行业
+export const INDUSTRY = [
+  { label: 'Agency', value: 'Agency' },
+  { label: 'CPG', value: 'CPG' },
+  { label: 'Financial Services', value: 'Financial Services' },
+  { label: 'Media & Entertainment', value: 'Media & Entertainment' },
+  { label: 'Pharmaceuticals & Healthcare', value: 'Pharmaceuticals & Healthcare' },
+  { label: 'Retail', value: 'Retail' },
+  { label: 'Technology', value: 'Technology' },
+  { label: 'Other', value: 'Other' },
+]
+
+// Which best matches what you're looking for?
+export const BEST_MATCHES = [
+  {
+    label: 'Social Listening / Consumer Intelligence',
+    value: 'Social Listening / Consumer Intelligence'
+  },
+  {
+    label: 'Social Media Management',
+    value: 'Social Media Management'
+  }
 ]

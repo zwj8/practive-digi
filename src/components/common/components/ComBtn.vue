@@ -1,16 +1,10 @@
 <template>
-  <button
-    v-if="!download"
-    type="button"
-    :disabled='disabled'
-    :class="[
-      'btn',
-      `btn-type-${type}`,
-      `btn-size-${size}`,
-      { 'btn-disabled': disabled }
-    ]"
-    @click="handleClick"
-  >
+  <button v-if="!download" type="button" :disabled='disabled' :class="[
+    'btn',
+    `btn-type-${type}`,
+    `btn-size-${size}`,
+    { 'btn-disabled': disabled }
+  ]" @click="handleClick">
     <div class="btn-loading" :class="`loading-vis--${loading ? 'visible' : 'hidden'}`">
       <i class="el-icon-loading"></i>
     </div>
@@ -18,17 +12,12 @@
       <slot />
     </div>
   </button>
-  <a
-    v-else
-    :href="download"
-    :class="[
-      'btn',
-      `btn-type-${type}`,
-      `btn-size-${size}`,
-      { 'btn-disabled': disabled }
-    ]"
-    @click="handleClick"
-  >
+  <a v-else :href="download" :class="[
+    'btn',
+    `btn-type-${type}`,
+    `btn-size-${size}`,
+    { 'btn-disabled': disabled }
+  ]" @click="handleClick">
     <slot />
   </a>
 </template>
@@ -40,7 +29,7 @@ export default {
     loading: { type: Boolean, default: false },
     // big basic mini
     size: { type: String, default: 'basic' },
-    // default primary black
+    // default primary black fixed
     type: { type: String, default: 'default' },
     // 按钮是否禁用
     disabled: { type: Boolean, default: false },
@@ -49,21 +38,21 @@ export default {
   },
   components: {},
   filters: {},
-  data () {
+  data() {
     return {
     }
   },
   computed: {},
   watch: {},
-  created () { },
-  mounted () { },
+  created() { },
+  mounted() { },
   methods: {
     /**
      * @description: 这样做，可以在使用组件点击事件时不用加.native
      * @param {*} evt
      * @return {*}
      */
-    handleClick (evt) {
+    handleClick(evt) {
       // 在loading状态时，不可重复点击
       if (this.loading) return
       this.$emit('click', evt)
@@ -73,6 +62,7 @@ export default {
 </script>
 <style  lang="less" scoped>
 @border-size: 2px; // 按钮边框
+
 // 按钮样式
 .btn {
   position: relative;
@@ -89,6 +79,7 @@ export default {
     color: @color-font-black;
     border: @border-size solid @color-font-black;
     background: transparent;
+
     &:hover {
       transition: all ease-in-out 0.2s;
       color: @color-primary;
@@ -101,6 +92,7 @@ export default {
     color: #fff;
     background: @color-primary;
     border: @border-size solid @color-primary;
+
     &:hover {
       transition: all ease-in-out 0.2s;
       color: @color-primary;
@@ -114,6 +106,7 @@ export default {
     color: #fff;
     background: @color-font-black;
     border: @border-size solid @color-font-black;
+
     &:hover {
       transition: all ease-in-out 0.2s;
       color: @color-font-black;
@@ -127,6 +120,7 @@ export default {
     color: @color-primary;
     background: transparent;
     border: @border-size solid @color-primary;
+
     &:hover {
       transition: all ease-in-out 0.2s;
       color: #fff;
@@ -140,11 +134,31 @@ export default {
     color: @color-font-black;
     background: transparent;
     border: @border-size solid @color-font-black;
+
     &:hover {
       transition: all ease-in-out 0.2s;
       color: #fff;
       border: @border-size solid @color-font-black;
       background: @color-font-black;
+    }
+  }
+
+  // 固定宽度，出题色背景
+  &.btn-type-fixed {
+    width: 320px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff;
+    background: @color-primary;
+    border: @border-size solid @color-primary;
+    border-radius: 5px !important;
+    padding: 10px !important;
+    font-size: 25px !important;
+
+    &:hover {
+      transition: all ease-in-out 0.2s;
+      background: @color-light-primary-80;
+      border: @border-size solid @color-light-primary-80;
     }
   }
 
@@ -173,10 +187,12 @@ export default {
     padding: 6px 15px;
   }
 }
+
 // 如果前方有按钮，则分隔10px
-.btn + .btn {
+.btn+.btn {
   margin-left: 10px;
 }
+
 // 按钮禁用
 .btn-disabled {
   opacity: 0.5;
@@ -193,9 +209,11 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
 .loading-vis--visible {
   visibility: inherit; // 使用继承，当放在com-model中时，可以根据模态框的显示情况切换
 }
+
 .loading-vis--hidden {
   visibility: hidden;
 }

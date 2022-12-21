@@ -13,7 +13,8 @@ service.defaults.withCredentials = true
 // 请求拦截
 service.interceptors.request.use(
   config => {
-    config.headers['X-DIGI-LANG'] = store.getters['global/i18n/language']
+    config.headers['x-dk-lang'] = store.getters['global/i18n/language']
+    config.headers['x-dk-region'] = store.getters['global/locate/userLocate'] || 'CN'
     return config
   },
   error => {
